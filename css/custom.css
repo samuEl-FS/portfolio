@@ -1,0 +1,16 @@
+/* Add here all your CSS customizations */
+.bg-acadia {
+  background-color: #32312f !important;
+}
+
+.tech-stack {
+  width: 80px;
+}
+
+.skills {
+  width: 30px;
+}
+
+.icon-share-custom::before {
+  content: '\e05b!important';
+}
