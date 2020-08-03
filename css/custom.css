@@ -4,7 +4,7 @@
 }
 
 .tech-stack {
-  width: 80px;
+  width: 40px;
 }
 
 .skills {
@@ -13,4 +13,29 @@
 
 .icon-share-custom::before {
   content: '\e05b!important';
+}
+
+.section.section.customsection-parallax {
+  background-color: rgb(139 139 139 / 22%);
+}
+/* Media Queries */
+
+@media (max-width: 576px) {
+  .custom-col-xs-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+@media (min-width: 768px) {
+  .tech-stack-md {
+    width: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tech-stack-lg {
+    width: 80px;
+  }
 }

@@ -8,7 +8,8 @@ Theme Version:	6.2.1
   'use strict';
 
   //About Me
-  $('#aboutMeMoreBtn').on('click', function () {
+  $('#aboutMeMoreBtn').on('click', function (e) {
+    e.preventDefault();
     const fullHeight = $('#aboutMeMore')[0].scrollHeight;
     $('#aboutMeMore').scrollTop(fullHeight);
     const val = $(this).text();
@@ -21,7 +22,8 @@ Theme Version:	6.2.1
   });
 
   //Skills
-  $('#skillsMoreBtn').on('click', function () {
+  $('#skillsMoreBtn').on('click', function (e) {
+    e.preventDefault();
     const fullHeight = $('#skillsMore')[0].scrollHeight;
     $('#skillsMore').scrollTop(fullHeight);
     const val = $(this).text();

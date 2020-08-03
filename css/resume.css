@@ -676,13 +676,13 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 }
 .custom-progress-bars .progress-label {
   float: left;
-  width: 30%;
+  width: 35%;
   clear: both;
   margin-top: 10px;
 }
 .custom-progress-bars .progress {
   float: left;
-  width: 70%;
+  width: 65%;
   height: 3px;
   margin-top: 20px;
 }
