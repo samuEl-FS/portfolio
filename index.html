@@ -131,7 +131,7 @@
                               <span class="custom-tooltip">Skills</span>
                             </a>
                           </li>
-                          <li>
+                          <!-- <li>
                             <a
                               data-hash
                               href="#portfolio"
@@ -140,7 +140,7 @@
                               <i class="icon-diamond icons"></i>
                               <span class="custom-tooltip">Portfolio</span>
                             </a>
-                          </li>
+                          </li> -->
                           <li>
                             <a
                               data-hash
@@ -215,18 +215,18 @@
                   Samuel Nadar
                 </h1>
                 <p
-                  class="text-color-dark font-weight-normal custom-font-size-2 custom-margin-bottom-1"
+                  class="text-color-light font-weight-normal custom-font-size-2 custom-margin-bottom-1"
                 >
                   Senior Front-End Developer at GreyAtom Edutech Pvt. Ltd
                 </p>
                 <span class="custom-about-me-infos">
-                  <span class="text-color-dark text-uppercase"
+                  <span class="custom-text-color-1 text-uppercase"
                     >Kurla West, Mumbai</span
                   >
-                  <span class="text-color-dark text-uppercase mb-3"
+                  <span class="custom-text-color-1 text-uppercase mb-3"
                     >Information Technology &amp; Services</span
                   >
-                  <span class="text-color-dark text-uppercase">
+                  <span class="custom-text-color-1 text-uppercase">
                     <strong class="text-color-light">Previous: </strong>
                     Front-End Developer at eClerx Services Ltd.
                     <a
@@ -236,7 +236,7 @@
                       >View More</a
                     >
                   </span>
-                  <span class="text-color-dark text-uppercase">
+                  <span class="custom-text-color-1 text-uppercase">
                     <strong class="text-color-light">Education: </strong>
                     Bachelor of Computer Engineering,Mumbai University.
                     <a
@@ -400,7 +400,7 @@
                 </p>
 
                 <div class="about-me-more" id="aboutMeMore">
-                  <p>
+                  <p class="custom-text-color-2">
                     I am a multi-disciplined web developer, studying and
                     specialising in all of the key areas required to
                     conceptualise, build, launch and ensure the success of a
@@ -409,7 +409,7 @@
                     invested in its success.
                   </p>
 
-                  <p>
+                  <p class="custom-text-color-2">
                     In my spare time, the web development community is a big
                     part of my life. Managing online programming groups and
                     blogs or attending a conference, I find keeping involved
@@ -418,7 +418,7 @@
                     am proud to be part of.
                   </p>
 
-                  <p>
+                  <p class="custom-text-color-2">
                     Besides programming I love spending time with friends and
                     family and can often be found together going out catching
                     the latest movie, staying in playing games on the sofa or
@@ -1283,7 +1283,7 @@
 
         <section
           id="portfolio"
-          class="section section-no-border background-color-secondary m-0"
+          class="section section-no-border background-color-secondary m-0 d-none"
         >
           <div class="container">
             <div class="row">
@@ -1754,20 +1754,23 @@
                       id="callSendMessage"
                       class="custom-form-style"
                       role="form"
+                      name="callSendMessage"
+                      action="https://formspree.io/maypkbar"
+                      method="POST"
                     >
                       <div class="form-content">
                         <div class="form-control-custom">
                           <input
                             type="text"
                             class="form-control"
-                            name="callName"
-                            placeholder="Your Name *"
+                            name="_replyto"
+                            placeholder="Your email: "
                             data-msg-required="This field is required."
                             id="callName"
                             required=""
                           />
                         </div>
-                        <div class="form-control-custom">
+                        <!-- <div class="form-control-custom">
                           <input
                             type="text"
                             class="form-control"
@@ -1777,8 +1780,8 @@
                             id="callSubject"
                             required=""
                           />
-                        </div>
-                        <div class="form-control-custom">
+                        </div> -->
+                        <!-- <div class="form-control-custom">
                           <input
                             type="text"
                             class="form-control"
@@ -1788,7 +1791,7 @@
                             id="email"
                             required=""
                           />
-                        </div>
+                        </div> -->
                         <div class="form-control-custom">
                           <textarea
                             maxlength="5000"
