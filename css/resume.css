@@ -261,7 +261,7 @@ section.section {
     perspective: 770px;
   }
   #header.header-floating .header-nav-main nav > ul > li > a:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -290,7 +290,7 @@ section.section {
     transform: rotateY(88deg);
   }
   #header.header-floating .header-nav-main nav > ul > li > a > span:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 50%;
@@ -394,7 +394,7 @@ section.section {
   position: relative;
 }
 .custom-about-me-links:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 0;
@@ -424,7 +424,7 @@ section.section {
 }
 .custom-nav-button.custom-divisors:before,
 .custom-nav-button.custom-divisors:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -670,7 +670,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 * Skills & Language
 */
 .custom-progress-bars:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -679,6 +679,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
   width: 35%;
   clear: both;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .custom-progress-bars .progress {
   float: left;
@@ -769,7 +770,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
 }
 .custom-thumb-info-1 .thumb-info-wrapper .thumb-info-plus:before,
 .custom-thumb-info-1 .thumb-info-wrapper .thumb-info-plus:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -798,7 +799,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
   background: transparent !important;
 }
 .custom-testimonial-style-1 blockquote p {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 1em;
   line-height: 1.8;
 }
@@ -807,7 +808,7 @@ section.custom-timeline .timeline-box .experience-info .company > span {
   margin: 19px 0 0 35px;
 }
 .custom-testimonial-style-1 .testimonial-author:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: -8px;
