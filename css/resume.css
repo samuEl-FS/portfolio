@@ -479,7 +479,7 @@ section.section {
 }
 .custom-list-style-1 li span:nth-child(1) {
   display: inline-block;
-  min-width: 100px;
+  min-width: 50px;
 }
 .custom-list-style-1 li span.custom-max-width-1 {
   min-width: 130px;
