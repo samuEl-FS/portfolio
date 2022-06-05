@@ -3,8 +3,27 @@
   var form = $('#my-form');
   var button = $('#formSubmit');
   var status = $('#add_err2');
+  var numberOfMonths = $('.numberOfMonths');
 
   // Success and Error functions for after the form is submitted
+
+  function getMonthDifference(startDate, endDate) {
+    return (
+      endDate.getMonth() -
+      startDate.getMonth() +
+      12 * (endDate.getFullYear() - startDate.getFullYear())
+    );
+  }
+
+  function assignMonths(){
+    var differenceMonths = getMonthDifference( new Date('2020-12-01'), new Date());
+    var years = Math.floor(differenceMonths / 12);
+    var months = (differenceMonths - (years * 12));
+    var text = '(' + (years > 0 ? years + ' YEAR ': '') + months + ' MONTHS)';
+    numberOfMonths.text(text);
+  }
+
+  assignMonths();
 
   function success() {
     form.reset();

@@ -31,11 +31,15 @@
 @media (min-width: 768px) {
   .tech-stack-md {
     width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
 }
 
 @media (min-width: 992px) {
   .tech-stack-lg {
     width: 80px;
+    height: 80px;
+    object-fit: contain;
   }
 }
