@@ -1,43 +1,164 @@
+/* ══════════════════════════════════════════════════════════
+   BackgroundAurora.css — Modern layered background system
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Root container ── */
 .background-aurora {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  background: #05060A;
 }
 
-.aurora {
+/* ── Layer 1: Multi-stop base gradient ── */
+.bg-base-gradient {
   position: absolute;
-  filter: blur(100px);
-  opacity: 0.25;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(30, 58, 138, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 90%, rgba(14, 116, 144, 0.20) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 50%, rgba(5, 6, 10, 1) 40%, transparent 100%);
+  z-index: 0;
+}
+
+/* ── Layer 2: Subtle SVG noise texture ── */
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ── Layer 3: Dot grid ── */
+.bg-dot-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ── Layer 4: Aurora orbs ── */
+.orb {
+  position: absolute;
   border-radius: 50%;
   mix-blend-mode: screen;
+  will-change: transform;
 }
 
-.aurora-1 {
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, var(--primary) 0%, transparent 80%);
-  top: -10vw;
-  left: -10vw;
+.orb-blue {
+  width: 65vw;
+  height: 65vw;
+  background: radial-gradient(circle at 40% 40%, #3B82F6 0%, rgba(59,130,246,0.3) 35%, transparent 70%);
+  filter: blur(110px);
+  opacity: 0.22;
+  top: -18vw;
+  left: -12vw;
 }
 
-.aurora-2 {
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, var(--secondary) 0%, transparent 80%);
-  bottom: -15vw;
-  right: -10vw;
+.orb-cyan {
+  width: 72vw;
+  height: 72vw;
+  background: radial-gradient(circle at 60% 60%, #06b6d4 0%, rgba(6,182,212,0.25) 35%, transparent 70%);
+  filter: blur(130px);
+  opacity: 0.18;
+  bottom: -22vw;
+  right: -14vw;
 }
 
-.aurora-3 {
-  width: 40vw;
-  height: 40vw;
-  background: radial-gradient(circle, var(--tertiary) 0%, transparent 80%);
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.orb-indigo {
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle at 50% 50%, #818cf8 0%, rgba(99,102,241,0.2) 40%, transparent 70%);
+  filter: blur(120px);
+  opacity: 0.16;
+  top: 30%;
+  left: 22%;
+}
+
+.orb-violet {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle at 50% 50%, #a855f7 0%, rgba(168,85,247,0.15) 40%, transparent 70%);
+  filter: blur(140px);
+  opacity: 0.13;
+  bottom: 5%;
+  left: -8vw;
+}
+
+/* ── Layer 5: Light shafts ── */
+.light-shaft {
+  position: absolute;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.shaft-1 {
+  width: 280px;
+  height: 160%;
+  top: -30%;
+  left: 38%;
+  background: linear-gradient(180deg, transparent 0%, rgba(56,189,248,0.18) 40%, transparent 100%);
+  filter: blur(60px);
+  transform: rotate(-14deg);
+}
+
+.shaft-2 {
+  width: 200px;
+  height: 140%;
+  top: -20%;
+  left: 68%;
+  background: linear-gradient(180deg, transparent 0%, rgba(99,102,241,0.14) 40%, transparent 100%);
+  filter: blur(50px);
+  transform: rotate(-10deg);
+}
+
+/* ── Layer 6: Horizon glow ── */
+.horizon-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35vh;
+  background: linear-gradient(to top,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(56, 189, 248, 0.04) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Layer 7: Micro stars ── */
+.stars-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.micro-star {
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  will-change: opacity, transform;
+}
+
+/* ── Layer 9: Vignette ── */
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(ellipse at 50% 50%,
+    transparent 40%,
+    rgba(5, 6, 10, 0.55) 80%,
+    rgba(5, 6, 10, 0.85) 100%
+  );
+  pointer-events: none;
 }
