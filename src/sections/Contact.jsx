@@ -4,7 +4,7 @@ import { Mail, Phone, Send, MessageSquare, CheckCircle, Rocket } from 'lucide-re
 import './Contact.css';
 import confetti from 'canvas-confetti';
 
-const RECIPIENT_EMAIL = 'nadarsamuel72@gmail.com';
+const RECIPIENT_EMAIL = 'jitengudhka07@gmail.com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -91,31 +91,31 @@ export default function Contact() {
           >
             <h3 style={{ fontSize: '1.4rem', marginBottom: '16px' }}>Let's Collaborate</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '32px' }}>
-              I am open to discuss new opportunities, architectural consultations, front-end optimization reviews, or general project inquiries. Feel free to reach out via Skype, phone, or email!
+              I am open to discuss new opportunities, architectural consultations, or full-stack delivery partnerships. Feel free to reach out by phone or email.
             </p>
 
             <div className="contact-details-list" style={{ display: 'grid', gap: '16px' }}>
-              <a href="mailto:nadarsamuel72@gmail.com" className="contact-detail-card glass-panel clickable">
+              <a href="mailto:jitengudhka07@gmail.com" className="contact-detail-card glass-panel clickable">
                 <div className="contact-card-icon icon-purple" style={{ color: '#38BDF8' }}><Mail size={20} /></div>
                 <div className="contact-card-content">
                   <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Email</span>
-                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>nadarsamuel72@gmail.com</span>
+                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>jitengudhka07@gmail.com</span>
                 </div>
               </a>
 
-              <a href="tel:+918097141225" className="contact-detail-card glass-panel clickable">
+              <a href="tel:+918888669285" className="contact-detail-card glass-panel clickable">
                 <div className="contact-card-icon icon-cyan" style={{ color: '#60A5FA' }}><Phone size={20} /></div>
                 <div className="contact-card-content">
                   <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Phone</span>
-                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>+91 80971 41225</span>
+                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>+91-8888669285</span>
                 </div>
               </a>
 
-              <a href="skype:nadarsamuel72@gmail.com?chat" className="contact-detail-card glass-panel clickable">
+              <a href="https://www.linkedin.com/in/jitengudhka" target="_blank" rel="noopener noreferrer" className="contact-detail-card glass-panel clickable">
                 <div className="contact-card-icon icon-pink" style={{ color: '#38BDF8' }}><MessageSquare size={20} /></div>
                 <div className="contact-card-content">
-                  <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Skype</span>
-                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>samuelnadar</span>
+                  <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>LinkedIn</span>
+                  <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>linkedin.com/in/jitengudhka</span>
                 </div>
               </a>
             </div>

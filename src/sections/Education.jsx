@@ -5,25 +5,11 @@ import './Education.css';
 
 const educationData = [
   {
-    institution: 'Mumbai University',
-    degree: 'Bachelor of Engineering (Computer Engineering)',
-    grade: 'CGPA 6.75',
-    period: '2012 - 2017',
+    institution: 'Universal College of Engineering, Mumbai',
+    degree: 'Bachelor of Computer Engineering',
+    grade: '7.5 CGPA',
+    period: '2017',
     icon: GraduationCap
-  },
-  {
-    institution: 'St. John The Baptist Junior College',
-    degree: 'Higher Secondary Certificate (HSC)',
-    grade: 'Percentage 60%',
-    period: '2010 - 2012',
-    icon: Award
-  },
-  {
-    institution: 'Shrimati Gujana High School',
-    degree: 'Secondary School Certificate (SSC)',
-    grade: 'Percentage 77.27%',
-    period: 'Graduated 2010',
-    icon: Award
   }
 ];
 
@@ -40,7 +26,7 @@ export default function Education() {
             transition={{ duration: 0.5 }}
             className="section-title text-gradient text-center"
           >
-            Education Milestones
+            Education
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}

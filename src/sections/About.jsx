@@ -4,18 +4,18 @@ import { Calendar, User2, Flag, Phone, Mail, Award, Target } from 'lucide-react'
 import './About.css';
 
 const personalDetails = [
-  { icon: Calendar, label: 'Birthday', value: '1993 May 12', color: 'text-cyan' },
-  { icon: User2, label: 'Marital Status', value: 'Married', color: 'text-purple' },
-  { icon: Flag, label: 'Nationality', value: 'Indian', color: 'text-pink' },
-  { icon: Phone, label: 'Phone', value: '+91 80971 41225', href: 'tel:+918097141225', color: 'text-cyan' },
-  { icon: Mail, label: 'Email', value: 'nadarsamuel72@gmail.com', href: 'mailto:nadarsamuel72@gmail.com', color: 'text-purple' }
+  { icon: Flag, label: 'Location', value: 'Mumbai, India', color: 'text-pink' },
+  { icon: Phone, label: 'Phone', value: '+91 88886 69285', href: 'tel:+918888669285', color: 'text-cyan' },
+  { icon: Mail, label: 'Email', value: 'jitengudhka07@gmail.com', href: 'mailto:jitengudhka07@gmail.com', color: 'text-purple' },
+  { icon: User2, label: 'Education', value: 'B.E. Computer Engineering (2017)', color: 'text-cyan' },
+  { icon: Calendar, label: 'Languages', value: 'English, Hindi, Marathi, Gujarati', color: 'text-purple' }
 ];
 
 const stats = [
   { id: 'exp', label: 'Years Experience', target: 8, suffix: '+' },
-  { id: 'projects', label: 'Completed Projects', target: 24, suffix: '+' },
-  { id: 'tech', label: 'Tech Stack Handled', target: 50, suffix: '+' },
-  { id: 'clients', label: 'Product Deployments', target: 12, suffix: '+' }
+  { id: 'projects', label: 'Projects Delivered', target: 20, suffix: '+' },
+  { id: 'tech', label: 'Technologies', target: 25, suffix: '+' },
+  { id: 'clients', label: 'Platforms Deployed', target: 10, suffix: '+' }
 ];
 
 // Simple Animated Counter component
@@ -109,10 +109,10 @@ export default function About() {
               <h3 style={{ fontSize: '1.4rem' }}>Professional Narrative</h3>
             </div>
             <p style={{ marginBottom: '16px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#60A5FA' }}>Accenture</strong>, <strong style={{ color: '#60A5FA' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#60A5FA' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
+              I am a dynamic full-stack developer with nearly <strong style={{ color: 'var(--text-primary)' }}>8 years of experience</strong> in frontend and backend development, specializing in <strong style={{ color: '#60A5FA' }}>React.js</strong>, <strong style={{ color: '#60A5FA' }}>React Native</strong>, <strong style={{ color: '#60A5FA' }}>Node.js</strong>, and TypeScript — building scalable, high-performing web and mobile applications.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              My focus is on <strong style={{ color: 'var(--text-primary)' }}>clean architecture</strong>, reusable components, and delivering exceptional user experiences through thoughtful engineering. I thrive where technical leadership meets product vision — driving code quality, setting standards, and turning complex requirements into elegant, maintainable solutions.
+              Proficient in <strong style={{ color: 'var(--text-primary)' }}>RESTful APIs, GraphQL, and microservices architecture</strong>, I thrive in Agile environments, bridging cross-functional teams to deliver robust full-stack solutions with measurable business impact.
             </p>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function About() {
                   Mission Objective
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                  To bridge complex business problems with elegant technical solutions — engineering high-performance frontends, scalable architectures, and fluid user experiences that make software feel effortless.
+                  To build impactful, scalable technology products that empower users — leveraging full-stack expertise in React, Node.js, and mobile development to engineer solutions that are fast, reliable, and built to grow.
                 </p>
               </div>
             </motion.div>

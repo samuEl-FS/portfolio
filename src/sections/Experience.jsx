@@ -36,156 +36,51 @@ function CompanyLogo({ src, alt }) {
 
 const experiences = [
   {
-    company: 'Accenture India Pvt. Ltd.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg',
-    link: 'https://www.accenture.com/us-en',
-    role: 'Software Engineer Team Lead',
-    period: 'Aug 2024 - Present',
-    location: 'Mumbai, India',
-    projects: [
-      {
-        name: 'Philip Morris International',
-        highlights: [
-          'Developed an advanced Query Generator supporting unlimited nested conditions.',
-          'Implemented dynamic logical operators (AND, OR, NOT) for business rule creation.',
-          'Built reusable React components for scalable rule management.'
-        ],
-        tech: ['React', 'TypeScript', 'Material UI']
-      },
-      {
-        name: 'Crédit Agricole Retail Bank',
-        highlights: [
-          'Built multiple enterprise frontend applications from scratch.',
-          'Designed scalable architecture following MVVM principles.',
-          'Developed reusable UI components and integrated secure banking APIs.'
-        ],
-        tech: ['React', 'Angular', 'TypeScript', 'Redux']
-      },
-      {
-        name: 'Unified Marketing Platform & Synops 2.0',
-        highlights: [
-          'Led a team of 6 frontend engineers.',
-          'Built Synops 2.0 from scratch using TurboRepo Monorepo.',
-          'Designed reusable component architecture and shared UI libraries.',
-          'Established coding standards, project structure, and development guidelines.',
-          'Participated in major architectural decisions for enterprise applications.'
-        ],
-        tech: ['React', 'TurboRepo', 'Monorepo', 'Storybook', 'Module Federation', 'CI-CD', 'Azure Cloud', 'Docker']
-      }
-    ],
-    tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
-      { name: 'Azure Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
-      { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' }
-    ]
-  },
-  {
-    company: 'JPMorgan Chase & Co.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J_P_Morgan_Chase_Logo_2008-1.svg/512px-J_P_Morgan_Chase_Logo_2008-1.svg.png',
-    link: 'https://www.jpmorgan.com/IN/en/about-us',
+    company: 'MathesisLabs Technologies Private Limited',
+    logo: '',
+    link: 'https://www.mathesislabs.com/',
     role: 'Senior Software Engineer',
-    period: 'Nov 2022 - Jul 2024',
+    period: 'Feb 2025 - Present',
     location: 'Mumbai, India',
     points: [
-      'Developed and maintained large-scale banking applications using modern frontend technologies.',
-      'Upgraded multiple Angular and React applications to the latest versions.',
-      'Managed production deployments using the Jules CI/CD pipeline.',
-      'Collaborated with cross-functional teams to deliver scalable, high-performance applications.',
-      'Improved application performance, maintainability, and user experience.'
+      'Developing scalable full-stack applications using React.js, React Native, Node.js, and Express.js.',
+      'Building backend service layers and API frameworks to support robust and maintainable enterprise applications.',
+      'Implementing service-oriented architecture patterns for flexible and scalable solutions.',
+      'Creating reusable frontend components and integrating them with backend systems for faster delivery.',
+      'Optimizing frontend and backend performance through lazy loading, code-splitting, and state management improvements.',
+      'Managing database design and operations using MongoDB and SQL while guiding development teams on coding standards and quality.'
     ],
     tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-      { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },
+      { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'React Native', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+      { name: 'Express.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg' },
+      { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg' },
+      { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' }
+    ]
+  },
+  {
+    company: 'Daynil Group Solution Pvt. Ltd.',
+    logo: '',
+    link: 'https://daynil.com/',
+    role: 'Senior Frontend Developer (Full Stack Contribution)',
+    period: 'Aug 2018 - Feb 2025',
+    location: 'Mumbai, India',
+    points: [
+      'Developed scalable web and mobile applications using React.js, React Native, and Node.js.',
+      'Implemented backend functionalities with Node.js and Express.js for multi-platform environments.',
+      'Integrated RESTful APIs, GraphQL services, and third-party platforms to expand application capabilities.',
+      'Designed responsive, accessible UI components and managed complex state workflows with Redux.',
+      'Implemented Firebase services, Google API integrations, push notifications, and multilingual support.',
+      'Ensured code quality through linting, standards, and best practices while working on database operations with MongoDB and SQL.'
+    ],
+    tech: [
+      { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'React Native', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
       { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' }
-    ]
-  },
-  {
-    company: 'Privacera, Inc.',
-    logo: 'https://privacera.com/wp-content/uploads/2021/04/privacera-logo.svg',
-    role: 'Senior Software Engineer',
-    period: 'Nov 2020 - Oct 2024',
-    location: 'Mumbai, Maharashtra',
-    points: [
-      'Led the frontend architecture upgrade of a large-scale React application from React 15 to React 17 with modern Hooks.',
-      'Implemented Webpack tree shaking and bundle optimization, resulting in a substantial reduction in initial bundle size.',
-      'Successfully migrated the UI framework from Bootstrap to Material-UI, creating custom responsive design components.',
-      'Wrote custom Babel automation scripts to scrub legacy code blocks and deprecated libraries from the codebase.',
-      'Developed reusable generic UI component libraries that reduced dashboard page loading delays.',
-      'Participated in architectural alignment calls with upper management and directly resolved business-critical customer issues.'
-    ],
-    tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-      { name: 'MobX', icon: 'https://raw.githubusercontent.com/mobxjs/mobx/main/website/static/img/mobx.png' },
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-      { name: 'Webpack', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg' },
-      { name: 'Material UI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg' }
-    ]
-  },
-  {
-    company: 'GreyAtom Edutech Pvt. Ltd',
-    role: 'Front-End Developer',
-    period: 'Jul 2019 - Sep 2020',
-    location: 'Mumbai, Maharashtra',
-    points: [
-      'Developed a core interactive online code editor supporting multiple programming languages using Monaco Editor.',
-      'Optimized loading and user interactions by leveraging React Suspense, Lazy Loading, and Fallback boundaries.',
-      'Designed and coded a centralized Custom Form API from scratch using React, Redux, and custom hooks.'
-    ],
-    tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
       { name: 'Redux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' }
-    ]
-  },
-  {
-    company: 'eClerx (PayPal Process)',
-    role: 'Front-End Developer',
-    period: 'May 2018 - Jun 2019',
-    location: 'Navi Mumbai, Maharashtra',
-    points: [
-      'Constructed responsive PayPal landing pages and static content interfaces with strict design requirements.',
-      'Designed and engineered a custom Vanilla JavaScript carousel component with high-fps slider transitions.',
-      'Created custom jQuery utility packages for comprehensive client-side form validation.',
-      'Built a productive Chrome Extension using jQuery to automate and speed up GitHub pull request workflows.'
-    ],
-    tech: [
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-      { name: 'jQuery', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' },
-      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
-      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' }
-    ]
-  },
-  {
-    company: 'LocoBuzz',
-    role: 'UI Developer',
-    period: 'Nov 2017 - May 2018',
-    location: 'Mumbai, Maharashtra',
-    points: [
-      'Built static webpages using HTML5, CSS3, Javascript, and jQuery.'
-    ],
-    tech: [
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
-      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
-      { name: 'jQuery', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' }
-    ]
-  },
-  {
-    company: 'Freelancing',
-    role: 'Freelance Frontend Engineer',
-    period: 'Aug 2017 - Oct 2017',
-    location: 'Remote',
-    points: [
-      'Built a comprehensive single-page online education portal with complex RBAC (Role-Based Access Control) for admins and students.',
-      'Implemented front-end dashboard panels utilizing React, Redux, GraphQL, and Material UI.'
-    ],
-    tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-      { name: 'Redux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
-      { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' }
+      { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' },
+      { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg' }
     ]
   }
 ];

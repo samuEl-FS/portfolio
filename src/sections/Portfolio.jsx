@@ -6,83 +6,67 @@ import './Portfolio.css';
 const projects = [
   {
     id: 1,
-    title: 'Data Science Monaco IDE',
+    title: 'Cross-Platform Mobile Applications',
     category: 'webapp',
     categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400',
+    img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'An online interactive multi-language programming environment featuring code highlighting, custom theme support, and console outputs powered by the Monaco Editor API.',
-    tech: ['React', 'Monaco Editor', 'CSS3', 'Suspense API'],
-    architecture: 'React-driven SPA with lazy-loaded code evaluation workers running in sandboxed virtual frames to prevent page crashing.',
-    challenges: 'Ensuring seamless HMR and low latency typing speeds when syncing large data frames to the editor canvas.',
-    solutions: 'Offloaded heavy syntax validation and compiler steps to service workers and debounced active cursor render updates.'
+    desc: 'Built cross-platform mobile applications using React Native with Node.js backend integration for seamless functionality, real-time features, and local data handling.',
+    tech: ['React Native', 'Node.js', 'Express.js', 'Firebase'],
+    architecture: 'Used a service-oriented mobile architecture with reusable modules and backend APIs to keep the app responsive and scalable.',
+    challenges: 'Balancing performance, offline support, and real-time notifications across multiple platforms.',
+    solutions: 'Optimized state flow, reduced redundant calls, and implemented efficient networking and storage patterns for a smoother experience.'
   },
   {
     id: 2,
-    title: 'Privacera Cloud Dashboard',
+    title: 'Web Applications & Business Systems',
     category: 'webapp',
     categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Enterprise security administration panel built with granular access governance controls, data analytics maps, and fast search filters.',
-    tech: ['React', 'MobX', 'Material UI', 'Webpack'],
-    architecture: 'Centralized state mapping structure utilizing MobX reactive observables paired with dynamic UI dashboard rendering grids.',
-    challenges: 'Handling thousands of data points across real-time security audit trails without causing UI frames dropped.',
-    solutions: 'Utilized virtualization libraries to window lists and optimized MobX tracking structures to minimize re-renders.'
+    desc: 'Developed scalable and responsive web applications with React.js and Node.js, including user administration, workflow management, reporting, and business automation modules.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+    architecture: 'Built modular frontends and backend services with clear separation of concerns to support maintainability and future growth.',
+    challenges: 'Supporting business workflows with secure data handling and responsive interfaces.',
+    solutions: 'Delivered reusable UI components and optimized backend interactions for reliability and improved performance.'
   },
   {
     id: 3,
-    title: 'PayPal Campaign Console',
-    category: 'design',
-    categoryLabel: 'Frontend Designs',
-    img: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=400',
+    title: 'Ontada Health',
+    category: 'webapp',
+    categoryLabel: 'Web Apps',
+    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Pixel-perfect responsive promotional web portal for PayPal merchant integrations with smooth scroll transitions and fluid visual designs.',
-    tech: ['JavaScript', 'HTML5', 'SASS', 'ScrollReveal'],
-    architecture: 'Standard static design stack optimized for SEO and load speeds with custom modular SASS layout classes.',
-    challenges: 'Ensuring consistent parallax timings across outdated browser versions and slow layout connections.',
-    solutions: 'Created vanilla JS requestAnimationFrame smooth handlers and added lightweight fallbacks for passive scroll actions.'
+    desc: 'Maintained and enhanced a healthcare platform with responsive interfaces, reusable UI components, REST API integrations, and reliable validation workflows.',
+    tech: ['React.js', 'REST APIs', 'Material UI', 'Firebase'],
+    architecture: 'Implemented a clean frontend structure with reusable UI patterns and secure data flows for dynamic healthcare content.',
+    challenges: 'Delivering a polished experience across devices while ensuring robust validation and authentication.',
+    solutions: 'Focused on responsive design, reusable components, and strong frontend error handling to improve stability and usability.'
   },
   {
     id: 4,
-    title: 'E-Learning Portal with RBAC',
+    title: 'DealBoard',
     category: 'webapp',
     categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Interactive student-teacher communication framework featuring Role-Based Access Control, live classrooms, and custom dashboard builders.',
-    tech: ['React', 'Redux', 'GraphQL', 'PostgreSQL'],
-    architecture: 'A secure GraphQL client schema fetching nodes on demand, coupled with Redux stores holding active session authentication layers.',
-    challenges: 'Implementing real-time role state validation at the router wrapper level to prevent private path leaks.',
-    solutions: 'Engineered custom hook-based navigation guards validating encrypted session keys before route entry events.'
-  },
-  {
-    id: 5,
-    title: 'Git-Flow Chrome Extension',
-    category: 'utility',
-    categoryLabel: 'Extensions & Utilities',
-    img: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=400',
-    slides: [
-      'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=600'
-    ],
-    desc: 'Productivity tool automating git repository updates, pull requests, and checklist creation directly inside the browser UI.',
-    tech: ['Chrome Extension API', 'jQuery', 'CSS3'],
-    architecture: 'Browser background worker script interfacing with GitHub REST API nodes via injected UI elements.',
-    challenges: 'Injecting dynamic buttons into Github DOM shells without triggering standard Content Security Policy errors.',
-    solutions: 'Styled isolated shadow DOM containers and mapped triggers securely through runtime extension messages.'
+    desc: 'Designed interactive dashboards and data-centric UI modules for deal tracking, real-time data handling, and improved business decision-making.',
+    tech: ['React.js', 'Redux', 'GraphQL', 'REST APIs'],
+    architecture: 'Created performance-focused frontend modules with strong state management and dynamic rendering for data-heavy views.',
+    challenges: 'Keeping the dashboard fast and responsive while integrating external services and real-time updates.',
+    solutions: 'Optimized rendering and state handling while ensuring responsive behavior across desktop and mobile devices.'
   }
 ];
 

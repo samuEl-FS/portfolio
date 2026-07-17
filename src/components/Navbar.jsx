@@ -123,7 +123,7 @@ export default function Navbar() {
               color: 'var(--text-primary)'
             }}
           >
-            Samuel<span style={{ color: '#38BDF8', textShadow: '0 0 10px rgba(56,189,248,0.4)' }}>Nadar</span>
+            Jiten<span style={{ color: '#38BDF8', textShadow: '0 0 10px rgba(56,189,248,0.4)' }}>Gudhka</span>
           </motion.div>
 
           {/* Desktop Navigation */}
