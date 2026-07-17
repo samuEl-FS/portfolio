@@ -16,7 +16,7 @@
   background: var(--bg-nav);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border-bottom: 1px solid var(--border-light);
+  /* border-bottom: 1px solid var(--border-light); */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -141,7 +141,8 @@
   transition: var(--transition-smooth);
 }
 
-.nav-mobile-link:hover, .nav-mobile-link.active {
+.nav-mobile-link:hover,
+.nav-mobile-link.active {
   background: rgba(255, 255, 255, 0.05);
   color: var(--primary);
 }
@@ -150,9 +151,11 @@
   .nav-desktop {
     display: none;
   }
+
   .nav-mobile-toggle {
     display: block;
   }
+
   .nav-mobile-drawer {
     position: absolute;
     top: 70px;

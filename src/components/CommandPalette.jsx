@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, User, Briefcase, Code2, FolderGit, GraduationCap, Mail, Music, CornerDownLeft } from 'lucide-react';
+import { Search, User, Briefcase, Code2, FolderGit, GraduationCap, Mail, CornerDownLeft } from 'lucide-react';
 import './CommandPalette.css';
 
 export default function CommandPalette() {
@@ -15,7 +15,7 @@ export default function CommandPalette() {
     { id: 'projects', label: 'Go to Projects', icon: FolderGit, action: () => scrollToSection('portfolio') },
     { id: 'education', label: 'Go to Education', icon: GraduationCap, action: () => scrollToSection('education') },
     { id: 'contact', label: 'Go to Contact', icon: Mail, action: () => scrollToSection('contact') },
-    { id: 'music', label: 'Toggle Background Ambient Music', icon: Music, action: () => toggleMusic() },
+    // { id: 'music', label: 'Toggle Background Ambient Music', icon: Music, action: () => toggleMusic() },
     { id: 'cv', label: 'Download Resume / CV', icon: FolderGit, action: () => downloadCV() },
   ];
 
@@ -40,10 +40,6 @@ export default function CommandPalette() {
     }
   };
 
-  const toggleMusic = () => {
-    window.dispatchEvent(new CustomEvent('toggle-ambient-audio'));
-    setIsOpen(false);
-  };
 
   const downloadCV = () => {
     // Dispatch download CV trigger
@@ -85,7 +81,7 @@ export default function CommandPalette() {
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    
+
     // Custom trigger from Navbar click
     const handleToggleEvent = () => setIsOpen((prev) => !prev);
     window.addEventListener('toggle-cmd-palette', handleToggleEvent);

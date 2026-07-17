@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Briefcase, GraduationCap, MessageSquare, Download, Terminal as TermIcon } from 'lucide-react';
+import { Mail, Briefcase, GraduationCap, MessageSquare, Download, Terminal as TermIcon } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import './Hero.css';
 
@@ -171,7 +171,7 @@ export default function Hero() {
 
           {/* Left: Text intro & typwriter */}
           <div className="hero-content">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -180,7 +180,7 @@ export default function Hero() {
             >
               <span className="badge-dot" style={{ backgroundColor: '#22c55e', boxShadow: '0 0 10px #22c55e' }}></span>
               Available for Opportunities
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -214,7 +214,7 @@ export default function Hero() {
               className="hero-description"
               style={{ color: 'var(--text-secondary)', lineHeight: '1.7', margin: '16px 0 32px' }}
             >
-              Front-end architect and Principal developer focused on engineering ultra-performant Webpack pipelines, React core state management structures, and responsive design systems.
+              Software Engineer Team Lead with 8+ years building enterprise-scale applications at Accenture, JPMorgan Chase, and Privacera — leading teams, architecting frontend systems, and delivering exceptional user experiences through React, Angular, and TypeScript.
             </motion.p>
 
             {/* Core details rows */}
@@ -224,10 +224,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="hero-details-list"
             >
-              <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              {/* <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <MapPin className="detail-icon" size={18} style={{ color: '#38BDF8' }} />
                 <span style={{ color: 'var(--text-secondary)' }}>602, Synergy Business Park, Mumbai</span>
-              </div>
+              </div> */}
               <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Briefcase className="detail-icon" size={18} style={{ color: '#60A5FA' }} />
                 <span style={{ color: 'var(--text-secondary)' }}>Software Engineer Team Lead at Accenture</span>
@@ -354,9 +354,6 @@ export default function Hero() {
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--text-primary)' }}>
                     Samuel Nadar
                   </h3>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                    v1.4.0
-                  </span>
                 </div>
 
                 <div

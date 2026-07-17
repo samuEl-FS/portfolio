@@ -10,26 +10,49 @@ const categories = [
   { id: 'devops', label: 'DevOps & Cloud', icon: Cloud }
 ];
 
-const skills = [
-  { name: 'React', level: 95, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-  { name: 'JavaScript', level: 90, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-  { name: 'HTML5', level: 85, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' },
-  { name: 'CSS3', level: 90, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
-  { name: 'Redux', level: 80, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-  { name: 'MobX', level: 80, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
-  { name: 'GraphQL', level: 80, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg' },
-  { name: 'Material UI', level: 85, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/db/Alternative_Material_UI_logo.svg' },
-  { name: 'SASS', level: 75, category: 'frontend', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg' },
+function SkillIcon({ src, alt }) {
+  const [hasError, setHasError] = useState(false);
   
-  { name: 'Java', level: 70, category: 'backend', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Java_programming_language_logo.svg' },
-  { name: 'Spring Boot', level: 70, category: 'backend', icon: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg' },
-  { name: 'Node JS', level: 65, category: 'backend', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
-  { name: 'PostgreSQL', level: 75, category: 'backend', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_logo.svg' },
+  if (hasError || !src) {
+    return <Code2 size={16} style={{ color: '#38BDF8' }} />;
+  }
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className="skill-icon-img"
+      onError={() => setHasError(true)}
+    />
+  );
+}
 
-  { name: 'Docker', level: 60, category: 'devops', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg' },
-  { name: 'Kubernetes', level: 50, category: 'devops', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg' },
-  { name: 'AWS', level: 50, category: 'devops', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-  { name: 'Github', level: 80, category: 'devops', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' }
+const skills = [
+  { name: 'React', level: 95, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+  { name: 'JavaScript', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+  { name: 'TypeScript', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+  { name: 'Angular', level: 80, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },
+  { name: 'Redux Toolkit', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
+  { name: 'Material UI', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg' },
+  { name: 'Tailwind CSS', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+  { name: 'HTML5 & CSS3', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+  { name: 'MobX', level: 80, category: 'frontend', icon: 'https://raw.githubusercontent.com/mobxjs/mobx/main/website/static/img/mobx.png' },
+  { name: 'GraphQL', level: 80, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' },
+  
+  { name: 'Node JS', level: 85, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+  { name: 'Express js', level: 80, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg' },
+  { name: 'Fastify', level: 75, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg' },
+  { name: 'Java', level: 70, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+  { name: 'Spring Boot', level: 70, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+  { name: 'PostgreSQL', level: 75, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+
+  { name: 'Azure Cloud', level: 80, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
+  { name: 'Azure CI-CD', level: 80, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
+  { name: 'TurboRepo', level: 80, category: 'devops', icon: 'https://raw.githubusercontent.com/vercel/turbo/main/packages/turbo-repository/logo.png' },
+  { name: 'Docker', level: 75, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+  { name: 'Kubernetes', level: 50, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg' },
+  { name: 'AWS', level: 50, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
+  { name: 'Github', level: 85, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' }
 ];
 
 const languages = [
@@ -129,14 +152,7 @@ export default function Skills() {
                 <div className="skill-info">
                   <div className="skill-logo-name">
                     <div className="skill-img-wrapper">
-                      <img 
-                        src={skill.icon} 
-                        alt={skill.name} 
-                        className="skill-icon-img"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
+                      <SkillIcon src={skill.icon} alt={skill.name} />
                     </div>
                     <span className="skill-name">{skill.name}</span>
                   </div>

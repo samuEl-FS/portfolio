@@ -74,9 +74,9 @@ const projects = [
     title: 'Git-Flow Chrome Extension',
     category: 'utility',
     categoryLabel: 'Extensions & Utilities',
-    img: 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=400',
+    img: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=600'
     ],
     desc: 'Productivity tool automating git repository updates, pull requests, and checklist creation directly inside the browser UI.',
     tech: ['Chrome Extension API', 'jQuery', 'CSS3'],

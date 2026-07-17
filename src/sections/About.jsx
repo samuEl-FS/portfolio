@@ -109,10 +109,10 @@ export default function About() {
               <h3 style={{ fontSize: '1.4rem' }}>Professional Narrative</h3>
             </div>
             <p style={{ marginBottom: '16px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              I am a results-oriented Software Engineer Team Lead with a strong track record of success in designing and executing front-end architectures. Over my career, I've led massive codebase upgrades (e.g. React 15 to 17), codebase optimizations, and standardized custom component designs.
+              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#60A5FA' }}>Accenture</strong>, <strong style={{ color: '#60A5FA' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#60A5FA' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              My focus is always on producing clean, performant code that enhances user experience. I thrive in challenging environments where I can resolve complex customer-facing issues, collaborate directly with product managers, and implement state-of-the-art web technologies.
+              My focus is on <strong style={{ color: 'var(--text-primary)' }}>clean architecture</strong>, reusable components, and delivering exceptional user experiences through thoughtful engineering. I thrive where technical leadership meets product vision — driving code quality, setting standards, and turning complex requirements into elegant, maintainable solutions.
             </p>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function About() {
                   Mission Objective
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                  To bridge complex data structures and micro-frontend layouts, engineering high-speed loading times and fluid interactions that remove boundaries between humans and software.
+                  To bridge complex business problems with elegant technical solutions — engineering high-performance frontends, scalable architectures, and fluid user experiences that make software feel effortless.
                 </p>
               </div>
             </motion.div>

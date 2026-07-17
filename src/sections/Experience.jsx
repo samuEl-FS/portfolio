@@ -1,28 +1,110 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ChevronDown, ChevronUp, Building, ExternalLink } from 'lucide-react';
 import './Experience.css';
+
+function CompanyLogo({ src, alt }) {
+  const [hasError, setHasError] = useState(false);
+  
+  if (hasError || !src) {
+    return (
+      <div style={{
+        width: '32px',
+        height: '32px',
+        borderRadius: '8px',
+        background: 'rgba(255,255,255,0.03)',
+        border: '1px solid rgba(255,255,255,0.08)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#38BDF8'
+      }}>
+        <Building size={16} />
+      </div>
+    );
+  }
+  
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '6px' }}
+      onError={() => setHasError(true)}
+    />
+  );
+}
 
 const experiences = [
   {
-    company: 'Accenture',
+    company: 'Accenture India Pvt. Ltd.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg',
+    link: 'https://www.accenture.com/us-en',
     role: 'Software Engineer Team Lead',
-    period: 'Oct 2024 - Present',
-    location: 'Mumbai, Maharashtra',
-    points: [
-      'Guiding a high-performing development team to build next-generation enterprise frontend modules.',
-      'Architecting and implementing scalable React dashboards and styling design systems.',
-      'Leading codebase optimizations, code reviews, and aligning architectural goals with product stakeholders.',
-      'Resolving business-critical system requirements and ensuring high-quality software delivery standards.'
+    period: 'Aug 2024 - Present',
+    location: 'Mumbai, India',
+    projects: [
+      {
+        name: 'Philip Morris International',
+        highlights: [
+          'Developed an advanced Query Generator supporting unlimited nested conditions.',
+          'Implemented dynamic logical operators (AND, OR, NOT) for business rule creation.',
+          'Built reusable React components for scalable rule management.'
+        ],
+        tech: ['React', 'TypeScript', 'Material UI']
+      },
+      {
+        name: 'Crédit Agricole Retail Bank',
+        highlights: [
+          'Built multiple enterprise frontend applications from scratch.',
+          'Designed scalable architecture following MVVM principles.',
+          'Developed reusable UI components and integrated secure banking APIs.'
+        ],
+        tech: ['React', 'Angular', 'TypeScript', 'Redux']
+      },
+      {
+        name: 'Unified Marketing Platform & Synops 2.0',
+        highlights: [
+          'Led a team of 6 frontend engineers.',
+          'Built Synops 2.0 from scratch using TurboRepo Monorepo.',
+          'Designed reusable component architecture and shared UI libraries.',
+          'Established coding standards, project structure, and development guidelines.',
+          'Participated in major architectural decisions for enterprise applications.'
+        ],
+        tech: ['React', 'TurboRepo', 'Monorepo', 'Storybook', 'Module Federation', 'CI-CD', 'Azure Cloud', 'Docker']
+      }
     ],
     tech: [
-      { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-      { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' }
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+      { name: 'Azure Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
+      { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' }
+    ]
+  },
+  {
+    company: 'JPMorgan Chase & Co.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/J_P_Morgan_Chase_Logo_2008-1.svg/512px-J_P_Morgan_Chase_Logo_2008-1.svg.png',
+    link: 'https://www.jpmorgan.com/IN/en/about-us',
+    role: 'Senior Software Engineer',
+    period: 'Nov 2022 - Jul 2024',
+    location: 'Mumbai, India',
+    points: [
+      'Developed and maintained large-scale banking applications using modern frontend technologies.',
+      'Upgraded multiple Angular and React applications to the latest versions.',
+      'Managed production deployments using the Jules CI/CD pipeline.',
+      'Collaborated with cross-functional teams to deliver scalable, high-performance applications.',
+      'Improved application performance, maintainability, and user experience.'
+    ],
+    tech: [
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },
+      { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' }
     ]
   },
   {
     company: 'Privacera, Inc.',
+    logo: 'https://privacera.com/wp-content/uploads/2021/04/privacera-logo.svg',
     role: 'Senior Software Engineer',
     period: 'Nov 2020 - Oct 2024',
     location: 'Mumbai, Maharashtra',
@@ -35,11 +117,11 @@ const experiences = [
       'Participated in architectural alignment calls with upper management and directly resolved business-critical customer issues.'
     ],
     tech: [
-      { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-      { name: 'MobX', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-      { name: 'Webpack', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-      { name: 'Material UI', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/db/Alternative_Material_UI_logo.svg' }
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'MobX', icon: 'https://raw.githubusercontent.com/mobxjs/mobx/main/website/static/img/mobx.png' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+      { name: 'Webpack', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg' },
+      { name: 'Material UI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg' }
     ]
   },
   {
@@ -53,9 +135,9 @@ const experiences = [
       'Designed and coded a centralized Custom Form API from scratch using React, Redux, and custom hooks.'
     ],
     tech: [
-      { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-      { name: 'Redux', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' }
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Redux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' }
     ]
   },
   {
@@ -70,10 +152,10 @@ const experiences = [
       'Built a productive Chrome Extension using jQuery to automate and speed up GitHub pull request workflows.'
     ],
     tech: [
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-      { name: 'jQuery', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/JQuery_logo_by_JQuery.svg' },
-      { name: 'HTML5', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' },
-      { name: 'CSS3', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' }
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+      { name: 'jQuery', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' },
+      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' }
     ]
   },
   {
@@ -85,10 +167,10 @@ const experiences = [
       'Built static webpages using HTML5, CSS3, Javascript, and jQuery.'
     ],
     tech: [
-      { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' },
-      { name: 'HTML5', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg' },
-      { name: 'CSS3', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
-      { name: 'jQuery', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/JQuery_logo_by_JQuery.svg' }
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
+      { name: 'jQuery', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' }
     ]
   },
   {
@@ -101,9 +183,9 @@ const experiences = [
       'Implemented front-end dashboard panels utilizing React, Redux, GraphQL, and Material UI.'
     ],
     tech: [
-      { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
-      { name: 'Redux', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
-      { name: 'GraphQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg' }
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Redux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
+      { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' }
     ]
   }
 ];
@@ -237,14 +319,31 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                    {exp.role}
-                  </h3>
-                  <h4 style={{ fontSize: '1rem', fontWeight: 500, color: '#60A5FA', marginBottom: '16px' }}>
-                    {exp.company}
-                  </h4>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <CompanyLogo src={exp.logo} alt={exp.company} />
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)', margin: 0 }}>
+                        {exp.role}
+                      </h3>
+                      <span style={{ fontSize: '0.9rem', color: '#60A5FA', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                        {exp.company}
+                        {exp.link && (
+                          <a 
+                            href={exp.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            onClick={(e) => e.stopPropagation()}
+                            style={{ color: '#38BDF8', display: 'inline-flex', alignItems: 'center' }}
+                            title="Visit website"
+                          >
+                            <ExternalLink size={12} />
+                          </a>
+                        )}
+                      </span>
+                    </div>
+                  </div>
 
-                  {/* Expandable achievements points */}
+                  {/* Expandable achievements / projects */}
                   <AnimatePresence initial={false}>
                     {isExpanded && (
                       <motion.div
@@ -254,22 +353,80 @@ export default function Experience() {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         style={{ overflow: 'hidden' }}
                       >
-                        <ul
-                          style={{
-                            paddingLeft: '16px',
-                            color: 'var(--text-secondary)',
-                            fontSize: '0.9rem',
-                            lineHeight: '1.6',
-                            marginBottom: '16px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '8px'
-                          }}
-                        >
-                          {exp.points.map((pt, pIdx) => (
-                            <li key={pIdx} style={{ listStyleType: 'square' }}>{pt}</li>
-                          ))}
-                        </ul>
+                        {exp.projects ? (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px', marginTop: '8px' }}>
+                            {exp.projects.map((proj, pIdx) => (
+                              <div 
+                                key={pIdx} 
+                                className="glass-panel" 
+                                style={{ 
+                                  padding: '16px', 
+                                  borderRadius: '16px', 
+                                  background: 'rgba(255,255,255,0.01)', 
+                                  border: '1px solid rgba(255,255,255,0.05)',
+                                  cursor: 'default'
+                                }}
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 600, color: '#60A5FA', marginBottom: '8px' }}>
+                                  ⚡ {proj.name}
+                                </h4>
+                                <ul
+                                  style={{
+                                    paddingLeft: '16px',
+                                    color: 'var(--text-secondary)',
+                                    fontSize: '0.88rem',
+                                    lineHeight: '1.6',
+                                    marginBottom: '10px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '6px'
+                                  }}
+                                >
+                                  {proj.highlights.map((high, hIdx) => (
+                                    <li key={hIdx} style={{ listStyleType: 'square' }}>{high}</li>
+                                  ))}
+                                </ul>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                  {proj.tech.map((tName, tIdx) => (
+                                    <span 
+                                      key={tIdx} 
+                                      className="tech-tag"
+                                      style={{ 
+                                        fontSize: '0.7rem', 
+                                        padding: '3px 8px', 
+                                        borderRadius: '6px', 
+                                        background: 'rgba(56, 189, 248, 0.08)', 
+                                        border: '1px solid rgba(56, 189, 248, 0.15)',
+                                        color: '#38BDF8',
+                                        fontWeight: 500
+                                      }}
+                                    >
+                                      {tName}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <ul
+                            style={{
+                              paddingLeft: '16px',
+                              color: 'var(--text-secondary)',
+                              fontSize: '0.9rem',
+                              lineHeight: '1.6',
+                              marginBottom: '16px',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '8px'
+                            }}
+                          >
+                            {exp.points.map((pt, pIdx) => (
+                              <li key={pIdx} style={{ listStyleType: 'square' }}>{pt}</li>
+                            ))}
+                          </ul>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -289,7 +446,7 @@ export default function Experience() {
                     {isExpanded ? (
                       <>Collapse achievements <ChevronUp size={14} /></>
                     ) : (
-                      <>Expand achievements <ChevronDown size={14} /></>
+                      <>Expand achievements / projects <ChevronDown size={14} /></>
                     )}
                   </div>
 

@@ -294,7 +294,7 @@
 .floating-tech-badge {
   position: absolute;
   padding: 8px 14px;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1.5px solid var(--border-light);
@@ -307,6 +307,7 @@
   pointer-events: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   animation: float-anim ease-in-out infinite alternate;
+  z-index: 10;
 }
 
 .floating-tech-badge img {
@@ -315,11 +316,11 @@
   object-fit: contain;
 }
 
-.badge-react { top: 12%; left: -8%; animation-duration: 4s; }
-.badge-node { top: 68%; left: -14%; animation-duration: 5s; }
-.badge-ts { top: -5%; right: -2%; animation-duration: 4.5s; }
-.badge-aws { top: 38%; right: -12%; animation-duration: 5.5s; }
-.badge-docker { top: 82%; right: -5%; animation-duration: 4.8s; }
+.badge-react { top: 12%; left: -18%; animation-duration: 4s; }
+.badge-node { top: 68%; left: -22%; animation-duration: 5s; }
+.badge-ts { top: -5%; right: -8%; animation-duration: 4.5s; }
+.badge-aws { top: 38%; right: -16%; animation-duration: 5.5s; }
+.badge-docker { top: 82%; right: -12%; animation-duration: 4.8s; }
 
 @keyframes float-anim {
   from {
