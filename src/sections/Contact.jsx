@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Send, MessageSquare, CheckCircle, Rocket } from 'lucide-react';
+import { Mail, Phone, Send, MessageSquare, CheckCircle, Rocket, AlertCircle } from 'lucide-react';
 import './Contact.css';
 import confetti from 'canvas-confetti';
+
+// ─────────────────────────────────────────────────────────────────────
+// SETUP: Go to https://formspree.io, create a free account, create a
+// new form, and replace the placeholder below with your form endpoint.
+// Example endpoint: https://formspree.io/f/xpzgwqla
+// ─────────────────────────────────────────────────────────────────────
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpzgwqla';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   // Focus state styling helper
   const [focusedField, setFocusedField] = useState(null);
@@ -17,29 +25,47 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setIsSubmitting(true);
-    
-    // Simulate API call and rocket launch animation
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Trigger canvas confetti celebrate!
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.6 },
-        colors: ['#3B82F6', '#38BDF8', '#60A5FA', '#05060A']
+    setSubmitError(false);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
       });
 
-      // Clear success badge after 6 seconds
-      setTimeout(() => setSubmitSuccess(false), 6000);
-    }, 2000);
+      if (response.ok) {
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+
+        // Trigger canvas confetti celebrate!
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ['#3B82F6', '#38BDF8', '#60A5FA', '#05060A']
+        });
+
+        // Clear success badge after 6 seconds
+        setTimeout(() => setSubmitSuccess(false), 6000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch {
+      setIsSubmitting(false);
+      setSubmitError(true);
+      setTimeout(() => setSubmitError(false), 5000);
+    }
   };
 
   return (
@@ -251,8 +277,8 @@ export default function Contact() {
                   position: 'relative',
                   overflow: 'hidden',
                   minHeight: '46px',
-                  background: submitSuccess ? '#22c55e' : 'var(--primary)',
-                  boxShadow: submitSuccess ? '0 0 20px rgba(34, 197, 94, 0.4)' : 'var(--primary-glow)'
+                  background: submitSuccess ? '#22c55e' : submitError ? '#ef4444' : 'var(--primary)',
+                  boxShadow: submitSuccess ? '0 0 20px rgba(34, 197, 94, 0.4)' : submitError ? '0 0 20px rgba(239, 68, 68, 0.4)' : 'var(--primary-glow)'
                 }}
               >
                 {isSubmitting ? (
@@ -263,11 +289,15 @@ export default function Contact() {
                     >
                       <Rocket size={16} />
                     </motion.div>
-                    Launching Payload...
+                    Sending...
                   </>
                 ) : submitSuccess ? (
                   <>
-                    <CheckCircle size={16} /> Connection Secured!
+                    <CheckCircle size={16} /> Message Sent!
+                  </>
+                ) : submitError ? (
+                  <>
+                    <AlertCircle size={16} /> Failed — try emailing directly
                   </>
                 ) : (
                   <>
