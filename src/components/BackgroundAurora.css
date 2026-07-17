@@ -1,0 +1,43 @@
+.background-aurora {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aurora {
+  position: absolute;
+  filter: blur(100px);
+  opacity: 0.25;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.aurora-1 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 80%);
+  top: -10vw;
+  left: -10vw;
+}
+
+.aurora-2 {
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 80%);
+  bottom: -15vw;
+  right: -10vw;
+}
+
+.aurora-3 {
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--tertiary) 0%, transparent 80%);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

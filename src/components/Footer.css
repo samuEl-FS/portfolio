@@ -1,0 +1,92 @@
+/* Quote Section Styling */
+.quote-banner-section {
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+.quote-card {
+  padding: 40px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-text {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .quote-text {
+    font-size: 1.4rem;
+  }
+}
+
+.quote-author {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer Section Styling */
+.footer-section {
+  border-top: 1px solid var(--border-light);
+  padding: 40px 0;
+  background-color: #02000c;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: var(--text-secondary);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.footer-logo span {
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-link {
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.footer-social-link:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
