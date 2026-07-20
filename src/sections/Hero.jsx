@@ -40,11 +40,11 @@ const LinkedinIcon = ({ size = 20, className }) => (
 );
 
 const roles = [
-  "Software Architect",
-  "Software Engineer Team Lead",
-  "React Expert",
-  "System Designer",
-  "AI Builder"
+  "Backend Software Engineer",
+  "Java & Spring Boot Engineer",
+  "Microservices Specialist",
+  "Cloud-Native Backend Developer",
+  "Distributed Systems Builder"
 ];
 
 export default function Hero() {
@@ -54,7 +54,7 @@ export default function Hero() {
 
   // Terminal state
   const [terminalHistory, setTerminalHistory] = useState([
-    { text: "System ready. Welcome to Samuel's workspace console.", type: "system" },
+    { text: "System ready. Welcome to Akshay's workspace console.", type: "system" },
     { text: "Type 'help' to see all available commands.", type: "system" }
   ]);
   const [terminalInput, setTerminalInput] = useState('');
@@ -92,20 +92,20 @@ export default function Hero() {
     if (!terminalInput.trim()) return;
 
     const cmd = terminalInput.trim().toLowerCase();
-    const historyUpdate = [...terminalHistory, { text: `samuel-workspace$ ${terminalInput}`, type: "user" }];
+    const historyUpdate = [...terminalHistory, { text: `akshay-workspace$ ${terminalInput}`, type: "user" }];
 
     switch (cmd) {
       case 'help':
         historyUpdate.push({ text: "Available commands:\n  about      - Display brief professional summary\n  skills     - View primary technology skillset\n  experience - Current workspace details\n  clear      - Clear terminal screen\n  confetti   - Fire particle celebration!", type: "response" });
         break;
       case 'about':
-        historyUpdate.push({ text: "Samuel Nadar is a Principal software developer specializing in React, high-performance styling, tree-shaking, and custom tool engineering.", type: "response" });
+        historyUpdate.push({ text: "Akshay Shridhar Takke is a backend software engineer with nearly 5 years of experience building scalable Java, Spring Boot, and microservices solutions for cloud-native platforms.", type: "response" });
         break;
       case 'skills':
-        historyUpdate.push({ text: "Primary Stack:\n  • React (Hooks, Suspense)\n  • Redux, MobX\n  • TypeScript, ESNext\n  • Webpack, Docker, AWS", type: "response" });
+        historyUpdate.push({ text: "Primary Stack:\n  • Java 8/11/17\n  • Spring Boot, Spring Security\n  • REST APIs, Kafka, Redis\n  • AWS, Azure, Docker, Kubernetes", type: "response" });
         break;
       case 'experience':
-        historyUpdate.push({ text: "Currently serving as a Software Engineer Team Lead at Accenture, guiding developers and architecting enterprise React UI frameworks.", type: "response" });
+        historyUpdate.push({ text: "Most recently worked as a Software Engineer at Freestone Infotech, delivering distributed backend systems, secure APIs, and data governance services.", type: "response" });
         break;
       case 'clear':
         setTerminalHistory([]);
@@ -189,7 +189,7 @@ export default function Hero() {
               className="hero-title"
               style={{ fontFamily: 'var(--font-display)', fontWeight: 900, letterSpacing: '-0.02em' }}
             >
-              Hi, I'm <span className="text-gradient-accent">Samuel Nadar</span>
+              Hi, I'm <span className="text-gradient-accent">Akshay Shridhar Takke</span>
             </motion.h1>
 
             <motion.div
@@ -214,7 +214,7 @@ export default function Hero() {
               className="hero-description"
               style={{ color: 'var(--text-secondary)', lineHeight: '1.7', margin: '16px 0 32px' }}
             >
-              Software Engineer Team Lead with 8+ years building enterprise-scale applications at Accenture, JPMorgan Chase, and Privacera — leading teams, architecting frontend systems, and delivering exceptional user experiences through React, Angular, and TypeScript.
+              Backend Software Engineer with nearly 5 years of experience designing scalable Java, Spring Boot, and microservices solutions across banking, fintech, and enterprise platforms. I build secure REST APIs, event-driven services, and cloud-native systems on AWS and Azure.
             </motion.p>
 
             {/* Core details rows */}
@@ -230,11 +230,11 @@ export default function Hero() {
               </div> */}
               <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Briefcase className="detail-icon" size={18} style={{ color: '#60A5FA' }} />
-                <span style={{ color: 'var(--text-secondary)' }}>Software Engineer Team Lead at Accenture</span>
+                <span style={{ color: 'var(--text-secondary)' }}>Software Engineer at Freestone Infotech Pvt Ltd</span>
               </div>
               <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <GraduationCap className="detail-icon" size={18} style={{ color: '#3B82F6' }} />
-                <span style={{ color: 'var(--text-secondary)' }}>Bachelor of Computer Engineering (Mumbai University)</span>
+                <span style={{ color: 'var(--text-secondary)' }}>MSc in Information Systems with Computing (Dublin Business School)</span>
               </div>
             </motion.div>
 
@@ -266,10 +266,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="hero-socials"
             >
-              <a href="mailto:nadarsamuel72@gmail.com" className="social-btn glass-panel clickable" title="Email"><Mail size={18} /></a>
-              <a href="https://github.com/samuelnadar" target="_blank" rel="noopener noreferrer" className="social-btn glass-panel clickable" title="GitHub"><GithubIcon size={18} /></a>
-              <a href="https://www.linkedin.com/in/samuel-nadar-376510111/" target="_blank" rel="noopener noreferrer" className="social-btn glass-panel clickable" title="LinkedIn"><LinkedinIcon size={18} /></a>
-              <a href="skype:nadarsamuel72@gmail.com?chat" className="social-btn glass-panel clickable" title="Skype"><MessageSquare size={18} /></a>
+              <a href="mailto:akshaytakke@icloud.com" className="social-btn glass-panel clickable" title="Email"><Mail size={18} /></a>
+              <a href="https://github.com/AkshayTakke" target="_blank" rel="noopener noreferrer" className="social-btn glass-panel clickable" title="GitHub"><GithubIcon size={18} /></a>
+              <a href="https://www.linkedin.com/in/akshay-takke" target="_blank" rel="noopener noreferrer" className="social-btn glass-panel clickable" title="LinkedIn"><LinkedinIcon size={18} /></a>
+              <a href="https://www.linkedin.com/in/akshay-takke" className="social-btn glass-panel clickable" title="LinkedIn"><MessageSquare size={18} /></a>
             </motion.div>
           </div>
 
@@ -316,7 +316,7 @@ export default function Hero() {
                 >
                   <img
                     src="/img/avatars/me.jpg"
-                    alt="Samuel Nadar"
+                    alt="Akshay Shridhar Takke"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     onError={(e) => {
                       e.target.onerror = null;
@@ -352,7 +352,7 @@ export default function Hero() {
               <div className="tilt-inner" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--text-primary)' }}>
-                    Samuel Nadar
+                    Akshay Shridhar Takke
                   </h3>
                 </div>
 
@@ -370,9 +370,9 @@ export default function Hero() {
                     gap: '4px'
                   }}
                 >
-                  <div>💻 <strong>Current:</strong> Accenture</div>
-                  <div>⚡ <strong>Status:</strong> Active Archiving</div>
-                  <div>📍 <strong>Location:</strong> Mumbai, India</div>
+                  <div>💻 <strong>Current:</strong> Dublin, Ireland</div>
+                  <div>⚡ <strong>Status:</strong> Open to backend roles</div>
+                  <div>📍 <strong>Focus:</strong> Java, Spring Boot & Cloud</div>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '8px' }}>
@@ -380,7 +380,7 @@ export default function Hero() {
                     onClick={() => {
                       const link = document.createElement('a');
                       link.href = '#';
-                      link.setAttribute('download', 'Samuel_Nadar_CV.pdf');
+                      link.setAttribute('download', 'Akshay_Takke_Resume.pdf');
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
@@ -434,7 +434,7 @@ export default function Hero() {
             ))}
 
             <form onSubmit={handleTerminalSubmit} className="terminal-input-line" style={{ marginTop: '6px' }}>
-              <span className="terminal-prompt">samuel-workspace$</span>
+              <span className="terminal-prompt">akshay-workspace$</span>
               <input
                 type="text"
                 className="terminal-input"

@@ -73,26 +73,26 @@ export default function Footer() {
         <div className="container">
           <div className="footer-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
             <div className="footer-logo" style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-              Samuel<span style={{ color: '#38BDF8' }}>Nadar</span>
+              Akshay<span style={{ color: '#38BDF8' }}>Takke</span>
             </div>
 
             <div className="footer-socials" style={{ display: 'flex', gap: '16px' }}>
-              <a href="mailto:nadarsamuel72@gmail.com" className="footer-social-link clickable" title="Email" style={{ color: 'var(--text-secondary)' }}>
+              <a href="mailto:akshaytakke@icloud.com" className="footer-social-link clickable" title="Email" style={{ color: 'var(--text-secondary)' }}>
                 <Mail size={18} />
               </a>
-              <a href="https://github.com/samuelnadar" target="_blank" rel="noopener noreferrer" className="footer-social-link clickable" title="GitHub" style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://github.com/AkshayTakke" target="_blank" rel="noopener noreferrer" className="footer-social-link clickable" title="GitHub" style={{ color: 'var(--text-secondary)' }}>
                 <GithubIcon size={18} />
               </a>
-              <a href="https://www.linkedin.com/in/samuel-nadar-376510111/" target="_blank" rel="noopener noreferrer" className="footer-social-link clickable" title="LinkedIn" style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://www.linkedin.com/in/akshay-takke" target="_blank" rel="noopener noreferrer" className="footer-social-link clickable" title="LinkedIn" style={{ color: 'var(--text-secondary)' }}>
                 <LinkedinIcon size={18} />
               </a>
-              <a href="skype:nadarsamuel72@gmail.com?chat" className="footer-social-link clickable" title="Skype" style={{ color: 'var(--text-secondary)' }}>
+              <a href="https://www.linkedin.com/in/akshay-takke" className="footer-social-link clickable" title="LinkedIn" style={{ color: 'var(--text-secondary)' }}>
                 <MessageSquare size={18} />
               </a>
             </div>
 
             <p className="footer-copyright" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              &copy; {new Date().getFullYear()} Samuel Nadar. All rights reserved.
+              &copy; {new Date().getFullYear()} Akshay Takke. All rights reserved.
             </p>
           </div>
         </div>

@@ -6,91 +6,74 @@ import './Portfolio.css';
 const projects = [
   {
     id: 1,
-    title: 'Data Science Monaco IDE',
+    title: 'Distributed Data Governance Platform',
     category: 'webapp',
-    categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400',
+    categoryLabel: 'Backend Systems',
+    img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'An online interactive multi-language programming environment featuring code highlighting, custom theme support, and console outputs powered by the Monaco Editor API.',
-    tech: ['React', 'Monaco Editor', 'CSS3', 'Suspense API'],
-    architecture: 'React-driven SPA with lazy-loaded code evaluation workers running in sandboxed virtual frames to prevent page crashing.',
-    challenges: 'Ensuring seamless HMR and low latency typing speeds when syncing large data frames to the editor canvas.',
-    solutions: 'Offloaded heavy syntax validation and compiler steps to service workers and debounced active cursor render updates.'
+    desc: 'Designed and implemented secure, policy-driven microservices for enterprise data governance and access management across hybrid cloud environments.',
+    tech: ['Java', 'Spring Boot', 'Spring Security', 'AWS', 'Azure'],
+    architecture: 'A modular microservices landscape exposing secure APIs and integrating policy engines with cloud-based storage and governance services.',
+    challenges: 'Balancing high-volume access control with strong security constraints and consistent service availability across distributed infrastructure.',
+    solutions: 'Applied service isolation, layered authentication, and caching strategies to improve reliability, maintainability, and response performance.'
   },
   {
     id: 2,
-    title: 'Privacera Cloud Dashboard',
+    title: 'Real-Time Search & Indexing Services',
     category: 'webapp',
-    categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400',
+    categoryLabel: 'Backend Systems',
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Enterprise security administration panel built with granular access governance controls, data analytics maps, and fast search filters.',
-    tech: ['React', 'MobX', 'Material UI', 'Webpack'],
-    architecture: 'Centralized state mapping structure utilizing MobX reactive observables paired with dynamic UI dashboard rendering grids.',
-    challenges: 'Handling thousands of data points across real-time security audit trails without causing UI frames dropped.',
-    solutions: 'Utilized virtualization libraries to window lists and optimized MobX tracking structures to minimize re-renders.'
+    desc: 'Built backend services for distributed data processing and search using Hadoop and Solr, enabling fast indexing and efficient retrieval.',
+    tech: ['Java', 'Hadoop', 'Solr', 'Kafka', 'Redis'],
+    architecture: 'A scalable ingestion pipeline paired with search and indexing components to support large enterprise datasets and performant lookups.',
+    challenges: 'Handling large-scale data flows while keeping query performance predictable and search responses low latency.',
+    solutions: 'Optimised indexing workflows, distributed processing patterns, and caching layers to support enterprise-grade retrieval speed.'
   },
   {
     id: 3,
-    title: 'PayPal Campaign Console',
-    category: 'design',
-    categoryLabel: 'Frontend Designs',
-    img: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=400',
+    title: 'Financial Planning API Suite',
+    category: 'webapp',
+    categoryLabel: 'API Work',
+    img: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Pixel-perfect responsive promotional web portal for PayPal merchant integrations with smooth scroll transitions and fluid visual designs.',
-    tech: ['JavaScript', 'HTML5', 'SASS', 'ScrollReveal'],
-    architecture: 'Standard static design stack optimized for SEO and load speeds with custom modular SASS layout classes.',
-    challenges: 'Ensuring consistent parallax timings across outdated browser versions and slow layout connections.',
-    solutions: 'Created vanilla JS requestAnimationFrame smooth handlers and added lightweight fallbacks for passive scroll actions.'
+    desc: 'Developed secure Spring Boot services for a financial planning platform with integrated third-party APIs and robust reporting support.',
+    tech: ['Spring Boot', 'MySQL', 'Postman', 'REST APIs'],
+    architecture: 'Service-oriented backend design with relational persistence and integration layers for data processing and financial insights.',
+    challenges: 'Ensuring data integrity and secure processing across external financial integrations and report generation workflows.',
+    solutions: 'Implemented well-defined service boundaries, strong validation rules, and tested API flows for dependable downstream usage.'
   },
   {
     id: 4,
-    title: 'E-Learning Portal with RBAC',
+    title: 'Healthcare Platform Backend Services',
     category: 'webapp',
-    categoryLabel: 'Web Apps',
-    img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400',
+    categoryLabel: 'Backend Systems',
+    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400',
     slides: [
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600',
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600'
+      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600',
+      'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=600'
     ],
-    desc: 'Interactive student-teacher communication framework featuring Role-Based Access Control, live classrooms, and custom dashboard builders.',
-    tech: ['React', 'Redux', 'GraphQL', 'PostgreSQL'],
-    architecture: 'A secure GraphQL client schema fetching nodes on demand, coupled with Redux stores holding active session authentication layers.',
-    challenges: 'Implementing real-time role state validation at the router wrapper level to prevent private path leaks.',
-    solutions: 'Engineered custom hook-based navigation guards validating encrypted session keys before route entry events.'
-  },
-  {
-    id: 5,
-    title: 'Git-Flow Chrome Extension',
-    category: 'utility',
-    categoryLabel: 'Extensions & Utilities',
-    img: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=400',
-    slides: [
-      'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=600'
-    ],
-    desc: 'Productivity tool automating git repository updates, pull requests, and checklist creation directly inside the browser UI.',
-    tech: ['Chrome Extension API', 'jQuery', 'CSS3'],
-    architecture: 'Browser background worker script interfacing with GitHub REST API nodes via injected UI elements.',
-    challenges: 'Injecting dynamic buttons into Github DOM shells without triggering standard Content Security Policy errors.',
-    solutions: 'Styled isolated shadow DOM containers and mapped triggers securely through runtime extension messages.'
+    desc: 'Built backend components for a healthcare application with modular architecture, reliable data handling, and production-ready deployment support.',
+    tech: ['Java', 'Spring Boot', 'Hibernate', 'Docker', 'PostgreSQL'],
+    architecture: 'A maintainable service layer backed by relational persistence and deployment-ready containerization for stable operations.',
+    challenges: 'Maintaining reliability and consistency in a domain where business workflows and data integrity are critical.',
+    solutions: 'Focused on clean service design, transactional integrity, and careful production support to improve stability and maintainability.'
   }
 ];
 
 const filters = [
   { id: 'all', label: 'All Projects' },
-  { id: 'webapp', label: 'Web Apps' },
-  { id: 'design', label: 'Designs' },
-  { id: 'utility', label: 'Utilities' }
+  { id: 'webapp', label: 'Backend Systems' },
+  { id: 'design', label: 'API Work' }
 ];
 
 export default function Portfolio() {

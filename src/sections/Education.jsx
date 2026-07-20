@@ -5,24 +5,17 @@ import './Education.css';
 
 const educationData = [
   {
-    institution: 'Mumbai University',
-    degree: 'Bachelor of Engineering (Computer Engineering)',
-    grade: 'CGPA 6.75',
-    period: '2012 - 2017',
+    institution: 'Dublin Business School',
+    degree: 'Master of Science in Information Systems with Computing',
+    grade: '2.1 GPA',
+    period: 'Jan 2023 - Oct 2024',
     icon: GraduationCap
   },
   {
-    institution: 'St. John The Baptist Junior College',
-    degree: 'Higher Secondary Certificate (HSC)',
-    grade: 'Percentage 60%',
-    period: '2010 - 2012',
-    icon: Award
-  },
-  {
-    institution: 'Shrimati Gujana High School',
-    degree: 'Secondary School Certificate (SSC)',
-    grade: 'Percentage 77.27%',
-    period: 'Graduated 2010',
+    institution: 'University of Mumbai',
+    degree: 'Bachelor of Engineering in Information Technology',
+    grade: '2.1 GPA',
+    period: 'Sep 2014 - May 2018',
     icon: Award
   }
 ];

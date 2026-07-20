@@ -45,7 +45,7 @@ export default function CommandPalette() {
     // Dispatch download CV trigger
     const link = document.createElement('a');
     link.href = '#';
-    link.setAttribute('download', 'Samuel_Nadar_Resume.pdf');
+    link.setAttribute('download', 'Akshay_Takke_Resume.pdf');
     document.body.appendChild(link);
     // Simulating download or trigger event
     window.dispatchEvent(new CustomEvent('download-cv-started'));

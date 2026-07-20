@@ -5,7 +5,7 @@ import './Loader.css';
 export default function Loader({ onFinish }) {
   const [progress, setProgress] = useState(0);
   const [typedName, setTypedName] = useState('');
-  const fullName = "Samuel Nadar";
+  const fullName = "Akshay Takke";
 
   useEffect(() => {
     // Progress counter simulation
@@ -62,7 +62,7 @@ export default function Loader({ onFinish }) {
         transition={{ duration: 0.5, type: 'spring' }}
         className="loader-logo"
       >
-        S<span>N</span>
+        A<span>T</span>
       </motion.div>
 
       <div className="loader-typing">

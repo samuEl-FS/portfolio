@@ -5,9 +5,9 @@ import './Skills.css';
 
 const categories = [
   { id: 'all', label: 'All Skills', icon: Sparkles },
-  { id: 'frontend', label: 'Frontend & UI', icon: Code2 },
-  { id: 'backend', label: 'Backend/DB', icon: Database },
-  { id: 'devops', label: 'DevOps & Cloud', icon: Cloud }
+  { id: 'backend', label: 'Backend', icon: Database },
+  { id: 'data', label: 'Data & Integration', icon: Globe2 },
+  { id: 'devops', label: 'Cloud & DevOps', icon: Cloud }
 ];
 
 function SkillIcon({ src, alt }) {
@@ -28,39 +28,32 @@ function SkillIcon({ src, alt }) {
 }
 
 const skills = [
-  { name: 'React', level: 95, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-  { name: 'JavaScript', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-  { name: 'TypeScript', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
-  { name: 'Angular', level: 80, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },
-  { name: 'Redux Toolkit', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg' },
-  { name: 'Material UI', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg' },
-  { name: 'Tailwind CSS', level: 90, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
-  { name: 'HTML5 & CSS3', level: 85, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
-  { name: 'MobX', level: 80, category: 'frontend', icon: 'https://raw.githubusercontent.com/mobxjs/mobx/main/website/static/img/mobx.png' },
-  { name: 'GraphQL', level: 80, category: 'frontend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg' },
-  
-  { name: 'Node JS', level: 85, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
-  { name: 'Express js', level: 80, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg' },
-  { name: 'Fastify', level: 75, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastify/fastify-original.svg' },
-  { name: 'Java', level: 70, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
-  { name: 'Spring Boot', level: 70, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
-  { name: 'PostgreSQL', level: 75, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+  { name: 'Java', level: 90, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+  { name: 'Spring Boot', level: 90, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+  { name: 'Spring Security', level: 85, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+  { name: 'REST APIs', level: 90, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+  { name: 'Hibernate / JPA', level: 80, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg' },
+  { name: 'Microservices', level: 85, category: 'backend', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
 
-  { name: 'Azure Cloud', level: 80, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
-  { name: 'Azure CI-CD', level: 80, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
-  { name: 'TurboRepo', level: 80, category: 'devops', icon: 'https://raw.githubusercontent.com/vercel/turbo/main/packages/turbo-repository/logo.png' },
-  { name: 'Docker', level: 75, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
-  { name: 'Kubernetes', level: 50, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg' },
-  { name: 'AWS', level: 50, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
-  { name: 'Github', level: 85, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' }
+  { name: 'Kafka', level: 80, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg' },
+  { name: 'PostgreSQL', level: 80, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+  { name: 'MySQL', level: 78, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+  { name: 'Redis', level: 75, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' },
+  { name: 'Hadoop', level: 70, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg' },
+  { name: 'Solr', level: 70, category: 'data', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solr/solr-original.svg' },
+
+  { name: 'AWS', level: 80, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
+  { name: 'Azure', level: 75, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
+  { name: 'Docker', level: 78, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+  { name: 'Kubernetes', level: 65, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg' },
+  { name: 'Jenkins', level: 75, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg' },
+  { name: 'Git', level: 85, category: 'devops', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' }
 ];
 
 const languages = [
   { name: 'English', proficiency: 'Advanced', code: 'US' },
-  { name: 'Japanese', proficiency: 'Beginner', code: 'JP' },
   { name: 'Hindi', proficiency: 'Advanced', code: 'IN' },
-  { name: 'Marathi', proficiency: 'Advanced', code: 'IN' },
-  { name: 'Tamil', proficiency: 'Advanced', code: 'IN' }
+  { name: 'Marathi', proficiency: 'Advanced', code: 'IN' }
 ];
 
 export default function Skills() {

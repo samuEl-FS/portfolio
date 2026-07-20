@@ -4,18 +4,18 @@ import { Calendar, User2, Flag, Phone, Mail, Award, Target } from 'lucide-react'
 import './About.css';
 
 const personalDetails = [
-  { icon: Calendar, label: 'Birthday', value: '1993 May 12', color: 'text-cyan' },
-  { icon: User2, label: 'Marital Status', value: 'Married', color: 'text-purple' },
+  { icon: Calendar, label: 'Location', value: 'Dublin, Ireland', color: 'text-cyan' },
+  { icon: User2, label: 'Current Focus', value: 'Backend Engineering & Cloud', color: 'text-purple' },
   { icon: Flag, label: 'Nationality', value: 'Indian', color: 'text-pink' },
-  { icon: Phone, label: 'Phone', value: '+91 80971 41225', href: 'tel:+918097141225', color: 'text-cyan' },
-  { icon: Mail, label: 'Email', value: 'nadarsamuel72@gmail.com', href: 'mailto:nadarsamuel72@gmail.com', color: 'text-purple' }
+  { icon: Phone, label: 'Phone', value: '+353 899446355', href: 'tel:+353899446355', color: 'text-cyan' },
+  { icon: Mail, label: 'Email', value: 'akshaytakke@icloud.com', href: 'mailto:akshaytakke@icloud.com', color: 'text-purple' }
 ];
 
 const stats = [
-  { id: 'exp', label: 'Years Experience', target: 8, suffix: '+' },
-  { id: 'projects', label: 'Completed Projects', target: 24, suffix: '+' },
-  { id: 'tech', label: 'Tech Stack Handled', target: 50, suffix: '+' },
-  { id: 'clients', label: 'Product Deployments', target: 12, suffix: '+' }
+  { id: 'exp', label: 'Years Experience', target: 5, suffix: '+' },
+  { id: 'projects', label: 'Backend Systems Built', target: 12, suffix: '+' },
+  { id: 'tech', label: 'Core Technologies', target: 15, suffix: '+' },
+  { id: 'clients', label: 'Cloud Platforms', target: 2, suffix: '+' }
 ];
 
 // Simple Animated Counter component
@@ -109,10 +109,10 @@ export default function About() {
               <h3 style={{ fontSize: '1.4rem' }}>Professional Narrative</h3>
             </div>
             <p style={{ marginBottom: '16px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#60A5FA' }}>Accenture</strong>, <strong style={{ color: '#60A5FA' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#60A5FA' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
+              I am a <strong style={{ color: 'var(--text-primary)' }}>Backend Software Engineer</strong> focused on building scalable, secure, and reliable systems using Java, Spring Boot, and cloud-native architecture. With <strong style={{ color: 'var(--text-primary)' }}>nearly 5 years of experience</strong>, I have delivered microservices, REST APIs, event-driven integrations, and data governance solutions across banking, fintech, and enterprise environments.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              My focus is on <strong style={{ color: 'var(--text-primary)' }}>clean architecture</strong>, reusable components, and delivering exceptional user experiences through thoughtful engineering. I thrive where technical leadership meets product vision — driving code quality, setting standards, and turning complex requirements into elegant, maintainable solutions.
+              My work spans <strong style={{ color: 'var(--text-primary)' }}>AWS and Azure</strong>, containerized deployments, distributed systems, and performance optimisation. I value clean design, strong testing practices, and engineering solutions that balance reliability, security, and maintainability.
             </p>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function About() {
                   Mission Objective
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                  To bridge complex business problems with elegant technical solutions — engineering high-performance frontends, scalable architectures, and fluid user experiences that make software feel effortless.
+                  To turn complex business requirements into robust backend systems — designing secure APIs, resilient microservices, and cloud-ready architectures that scale with confidence.
                 </p>
               </div>
             </motion.div>
