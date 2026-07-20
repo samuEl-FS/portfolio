@@ -277,11 +277,11 @@ export default function Hero() {
           <div className="hero-image-wrapper perspective-container" style={{ display: 'flex', justifyContent: 'center' }}>
 
             {/* Independent Orbiting tech badges around card */}
-            <div className="floating-tech-badge badge-react clickable"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" /><span>React</span></div>
-            <div className="floating-tech-badge badge-node clickable"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node" /><span>Node</span></div>
-            <div className="floating-tech-badge badge-ts clickable"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TS" /><span>TypeScript</span></div>
-            <div className="floating-tech-badge badge-aws clickable"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" /><span>AWS</span></div>
-            <div className="floating-tech-badge badge-docker clickable"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" /><span>Docker</span></div>
+            <div className="floating-tech-badge badge-react clickable"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" /><span>Java</span></div>
+            <div className="floating-tech-badge badge-node clickable"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" /><span>Spring Boot</span></div>
+            <div className="floating-tech-badge badge-ts clickable"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Kafka" /><span>Kafka</span></div>
+            <div className="floating-tech-badge badge-aws clickable"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" /><span>AWS</span></div>
+            <div className="floating-tech-badge badge-docker clickable"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" /><span>Docker</span></div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
