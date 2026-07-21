@@ -171,7 +171,7 @@ export default function Hero() {
 
           {/* Left: Text intro & typwriter */}
           <div className="hero-content">
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -180,7 +180,7 @@ export default function Hero() {
             >
               <span className="badge-dot" style={{ backgroundColor: '#22c55e', boxShadow: '0 0 10px #22c55e' }}></span>
               Available for Opportunities
-            </motion.div> */}
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -370,7 +370,7 @@ export default function Hero() {
                     gap: '4px'
                   }}
                 >
-                  <div>💻 <strong>Current:</strong> Dublin, Ireland</div>
+                  {/* <div>💻 <strong>Current:</strong> Dublin, Ireland</div> */}
                   <div>⚡ <strong>Status:</strong> Open to backend roles</div>
                   <div>📍 <strong>Focus:</strong> Java, Spring Boot & Cloud</div>
                 </div>
