@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, Calendar, MapPin, ChevronDown, ChevronUp, Building, ExternalLink } from 'lucide-react';
+import { getFormattedExperienceString } from '../utils/experience';
 import './Experience.css';
 
 function CompanyLogo({ src, alt }) {
@@ -226,6 +227,17 @@ export default function Experience() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="section-title-underline"
           />
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="cyber-badge"
+            style={{ marginTop: '16px' }}
+          >
+            <span className="badge-dot"></span>
+            {getFormattedExperienceString()} YEARS TOTAL CAREER (SINCE LOCOBUZZ NOV 2017)
+          </motion.div>
         </div>
 
         <div className="timeline-container" style={{ position: 'relative', marginTop: '48px' }}>
