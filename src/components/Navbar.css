@@ -13,11 +13,11 @@
 
 .navbar-wrapper.scrolled {
   height: 70px;
-  background: var(--bg-nav);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  /* border-bottom: 1px solid var(--border-light); */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(3, 7, 18, 0.78);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 -1px 1px rgba(0, 242, 254, 0.15);
 }
 
 .nav-container {
@@ -44,7 +44,7 @@
 
 .nav-logo span {
   color: var(--primary);
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(90deg, #FFFFFF 0%, #00F2FE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -53,10 +53,14 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.03);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(8, 14, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 6px;
-  border-radius: 14px;
-  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .nav-link-btn {

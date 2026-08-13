@@ -296,10 +296,7 @@ export default function Hero() {
                 width: '100%',
                 maxWidth: '380px',
                 padding: '24px',
-                background: 'rgba(15, 23, 42, 0.55)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '30px',
-                boxShadow: '0 25px 60px rgba(0,0,0,0.5)'
+                borderRadius: '30px'
               }}
             >
               <div className="shine-effect" />
