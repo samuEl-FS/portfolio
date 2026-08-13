@@ -126,7 +126,7 @@ export default function Skills() {
                   transition: 'all 0.3s'
                 }}
               >
-                <Icon size={16} style={{ color: isActive ? '#38BDF8' : 'inherit' }} />
+                <Icon size={16} style={{ color: isActive ? '#00F2FE' : 'inherit' }} />
                 {cat.label}
               </button>
             );
@@ -173,9 +173,9 @@ export default function Skills() {
         </motion.div>
 
         {/* Languages section */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '40px' }}>
+        <div style={{ borderTop: '1px solid rgba(0,242,254,0.15)', paddingTop: '40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '24px' }}>
-            <Globe2 size={20} style={{ color: '#38BDF8' }} />
+            <Globe2 size={20} style={{ color: '#00F2FE' }} />
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 700 }}>
               Languages Spoken
             </h3>
@@ -199,8 +199,8 @@ export default function Skills() {
                 className="glass-panel clickable"
                 style={{
                   padding: '12px 24px',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  background: 'rgba(8, 14, 26, 0.6)',
+                  border: '1px solid rgba(0, 242, 254, 0.15)',
                   borderRadius: '16px',
                   display: 'flex',
                   alignItems: 'center',
@@ -213,7 +213,7 @@ export default function Skills() {
                 </span>
                 <div>
                   <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-primary)' }}>{lang.name}</div>
-                  <div style={{ fontSize: '0.7rem', color: '#60A5FA', fontWeight: 500 }}>{lang.proficiency}</div>
+                  <div style={{ fontSize: '0.7rem', color: '#00F2FE', fontWeight: 500 }}>{lang.proficiency}</div>
                 </div>
               </motion.div>
             ))}

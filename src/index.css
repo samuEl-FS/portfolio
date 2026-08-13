@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* Color Tokens */
-  --bg-dark: #05060A;
-  --bg-card: rgba(15, 23, 42, 0.45);
-  --bg-nav: rgba(5, 6, 10, 0.75);
-  --border-light: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(56, 189, 248, 0.3);
+  /* Color Tokens - Pure Electric Cyan & Glowing Blue */
+  --bg-dark: #030712;
+  --bg-card: rgba(8, 14, 26, 0.7);
+  --bg-nav: rgba(5, 8, 17, 0.85);
+  --border-light: rgba(0, 242, 254, 0.15);
+  --border-hover: rgba(0, 242, 254, 0.5);
   
-  --primary: #3B82F6;       /* Accent Blue */
-  --primary-glow: rgba(59, 130, 246, 0.35);
-  --secondary: #60A5FA;     /* Electric Blue */
-  --secondary-glow: rgba(96, 165, 250, 0.35);
-  --tertiary: #38BDF8;      /* Glow */
-  --accent: #38BDF8;        /* Glow */
+  --primary: #00F2FE;       /* Electric Neon Cyan */
+  --primary-glow: rgba(0, 242, 254, 0.4);
+  --secondary: #00D8F6;     /* Glowing Cyan-Blue */
+  --secondary-glow: rgba(0, 216, 246, 0.4);
+  --tertiary: #0088FF;      /* Neon Deep Blue Glow */
+  --accent: #00F2FE;        /* Electric Cyan Accent */
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
   
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -44,11 +44,12 @@
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(0, 242, 254, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
 }
 
 body {
@@ -83,38 +84,61 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-light);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   transition: var(--transition-smooth);
 }
 
 .glass-panel:hover {
   border-color: var(--border-hover);
-  box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(0, 242, 254, 0.25), 0 0 20px 0 rgba(0, 216, 246, 0.2);
 }
 
 /* Glowing text & details */
 .text-glow {
-  text-shadow: 0 0 12px var(--primary-glow);
+  text-shadow: 0 0 16px var(--primary-glow);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(90deg, #FFFFFF 0%, #00F2FE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+  background: linear-gradient(90deg, #00F2FE 0%, #0088FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Cyber Status Pill Badge */
+.cyber-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00F2FE;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
 /* Buttons */
 .btn-glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 242, 254, 0.05);
   backdrop-filter: blur(8px);
-  border: 1px solid var(--border-light);
-  color: var(--text-primary);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: #FFFFFF;
   padding: 12px 28px;
   border-radius: 12px;
   font-family: var(--font-display);
@@ -128,32 +152,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 242, 254, 0.12);
   border-color: var(--primary);
-  box-shadow: 0 0 20px var(--primary-glow);
+  box-shadow: 0 0 25px var(--primary-glow);
+  color: #00F2FE;
   transform: translateY(-2px);
 }
 
 .btn-primary-glow {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #00F2FE 0%, #0088FF 100%);
   border: none;
-  color: #fff;
+  color: #030712;
   padding: 12px 28px;
   border-radius: 12px;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 20px var(--primary-glow);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
   transition: var(--transition-smooth);
 }
 
 .btn-primary-glow:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 136, 255, 0.5);
 }
 
 /* Layout Utilities */

@@ -96,7 +96,7 @@ export default function Contact() {
 
             <div className="contact-details-list" style={{ display: 'grid', gap: '16px' }}>
               <a href="mailto:nadarsamuel72@gmail.com" className="contact-detail-card glass-panel clickable">
-                <div className="contact-card-icon icon-purple" style={{ color: '#38BDF8' }}><Mail size={20} /></div>
+                <div className="contact-card-icon icon-purple" style={{ color: '#00F2FE' }}><Mail size={20} /></div>
                 <div className="contact-card-content">
                   <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Email</span>
                   <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>nadarsamuel72@gmail.com</span>
@@ -104,7 +104,7 @@ export default function Contact() {
               </a>
 
               <a href="tel:+918097141225" className="contact-detail-card glass-panel clickable">
-                <div className="contact-card-icon icon-cyan" style={{ color: '#60A5FA' }}><Phone size={20} /></div>
+                <div className="contact-card-icon icon-cyan" style={{ color: '#00D8F6' }}><Phone size={20} /></div>
                 <div className="contact-card-content">
                   <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Phone</span>
                   <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>+91 80971 41225</span>
@@ -112,7 +112,7 @@ export default function Contact() {
               </a>
 
               <a href="skype:nadarsamuel72@gmail.com?chat" className="contact-detail-card glass-panel clickable">
-                <div className="contact-card-icon icon-pink" style={{ color: '#38BDF8' }}><MessageSquare size={20} /></div>
+                <div className="contact-card-icon icon-pink" style={{ color: '#00F2FE' }}><MessageSquare size={20} /></div>
                 <div className="contact-card-content">
                   <span className="contact-card-label" style={{ display: 'block', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Skype</span>
                   <span className="contact-card-value" style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>samuelnadar</span>
@@ -143,7 +143,7 @@ export default function Contact() {
                     left: '16px',
                     top: focusedField === 'name' || formData.name ? '6px' : '16px',
                     fontSize: focusedField === 'name' || formData.name ? '0.7rem' : '0.9rem',
-                    color: focusedField === 'name' ? '#38BDF8' : 'var(--text-muted)',
+                    color: focusedField === 'name' ? '#00F2FE' : 'var(--text-muted)',
                     transition: 'all 0.2s',
                     pointerEvents: 'none'
                   }}
@@ -163,7 +163,7 @@ export default function Contact() {
                     padding: '24px 16px 8px 16px',
                     width: '100%',
                     background: 'rgba(255, 255, 255, 0.02)',
-                    border: focusedField === 'name' ? '1px solid rgba(56, 189, 248, 0.4)' : '1px solid rgba(255, 255, 255, 0.08)',
+                    border: focusedField === 'name' ? '1px solid rgba(0, 242, 254, 0.5)' : '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '12px',
                     color: 'var(--text-primary)',
                     outline: 'none',
@@ -182,7 +182,7 @@ export default function Contact() {
                     left: '16px',
                     top: focusedField === 'email' || formData.email ? '6px' : '16px',
                     fontSize: focusedField === 'email' || formData.email ? '0.7rem' : '0.9rem',
-                    color: focusedField === 'email' ? '#38BDF8' : 'var(--text-muted)',
+                    color: focusedField === 'email' ? '#00F2FE' : 'var(--text-muted)',
                     transition: 'all 0.2s',
                     pointerEvents: 'none'
                   }}
@@ -202,7 +202,7 @@ export default function Contact() {
                     padding: '24px 16px 8px 16px',
                     width: '100%',
                     background: 'rgba(255, 255, 255, 0.02)',
-                    border: focusedField === 'email' ? '1px solid rgba(56, 189, 248, 0.4)' : '1px solid rgba(255, 255, 255, 0.08)',
+                    border: focusedField === 'email' ? '1px solid rgba(0, 242, 254, 0.5)' : '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '12px',
                     color: 'var(--text-primary)',
                     outline: 'none',
@@ -221,7 +221,7 @@ export default function Contact() {
                     left: '16px',
                     top: focusedField === 'message' || formData.message ? '6px' : '16px',
                     fontSize: focusedField === 'message' || formData.message ? '0.7rem' : '0.9rem',
-                    color: focusedField === 'message' ? '#38BDF8' : 'var(--text-muted)',
+                    color: focusedField === 'message' ? '#00F2FE' : 'var(--text-muted)',
                     transition: 'all 0.2s',
                     pointerEvents: 'none'
                   }}
@@ -241,7 +241,7 @@ export default function Contact() {
                     padding: '24px 16px 8px 16px',
                     width: '100%',
                     background: 'rgba(255, 255, 255, 0.02)',
-                    border: focusedField === 'message' ? '1px solid rgba(56, 189, 248, 0.4)' : '1px solid rgba(255, 255, 255, 0.08)',
+                    border: focusedField === 'message' ? '1px solid rgba(0, 242, 254, 0.5)' : '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '12px',
                     color: 'var(--text-primary)',
                     outline: 'none',

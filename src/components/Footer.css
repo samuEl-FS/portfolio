@@ -4,7 +4,7 @@
   text-align: center;
   position: relative;
   z-index: 10;
-  background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.02) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 242, 254, 0.02) 100%);
 }
 
 .quote-card {
@@ -40,9 +40,9 @@
 
 /* Footer Section Styling */
 .footer-section {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(0, 242, 254, 0.15);
   padding: 40px 0;
-  background-color: #02000c;
+  background-color: #030712;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -64,8 +64,8 @@
 }
 
 .footer-logo span {
-  color: var(--primary);
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #00F2FE;
+  background: linear-gradient(90deg, #00F2FE 0%, #0088FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

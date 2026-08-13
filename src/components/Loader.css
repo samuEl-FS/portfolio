@@ -1,7 +1,7 @@
 .loader-overlay {
   position: fixed;
   inset: 0;
-  background-color: #05060A;
+  background-color: #030712;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,14 +19,14 @@
 }
 
 .loader-logo span {
-  color: var(--primary);
-  text-shadow: 0 0 15px var(--primary-glow);
+  color: #00F2FE;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
 }
 
 .loader-typing {
   font-family: monospace;
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: #00F2FE;
   height: 24px;
   margin-bottom: 30px;
   letter-spacing: 0.05em;
@@ -35,7 +35,7 @@
 .loader-bar-bg {
   width: 220px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 242, 254, 0.1);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -43,8 +43,8 @@
 
 .loader-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--tertiary));
-  box-shadow: 0 0 10px var(--tertiary);
+  background: linear-gradient(90deg, #00F2FE 0%, #0088FF 100%);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
   border-radius: 10px;
 }
 
@@ -53,7 +53,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 2px solid var(--tertiary);
+  border: 1.5px solid rgba(0, 242, 254, 0.4);
   opacity: 0;
   animation: pulse-ring 2.5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
 }
