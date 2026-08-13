@@ -79,12 +79,12 @@ export default function About() {
               className="stat-card glass-panel text-center clickable"
               style={{
                 padding: '24px',
-                background: 'rgba(15, 23, 42, 0.4)',
-                border: '1px solid rgba(255, 255, 255, 0.06)',
+                background: 'rgba(8, 14, 26, 0.65)',
+                border: '1px solid rgba(0, 242, 254, 0.15)',
                 borderRadius: '20px'
               }}
             >
-              <h3 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#38BDF8', marginBottom: '8px' }}>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#00F2FE', textShadow: '0 0 15px rgba(0, 242, 254, 0.4)', marginBottom: '8px' }}>
                 <AnimatedCounter value={s.target} />{s.suffix}
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: 500 }}>
@@ -105,11 +105,11 @@ export default function About() {
             style={{ padding: '32px' }}
           >
             <div className="bio-header" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <Award className="bio-icon" size={24} style={{ color: '#60A5FA' }} />
+              <Award className="bio-icon" size={24} style={{ color: '#00F2FE' }} />
               <h3 style={{ fontSize: '1.4rem' }}>Professional Narrative</h3>
             </div>
             <p style={{ marginBottom: '16px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#60A5FA' }}>Accenture</strong>, <strong style={{ color: '#60A5FA' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#60A5FA' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
+              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#00F2FE' }}>Accenture</strong>, <strong style={{ color: '#00F2FE' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#00F2FE' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
               My focus is on <strong style={{ color: 'var(--text-primary)' }}>clean architecture</strong>, reusable components, and delivering exceptional user experiences through thoughtful engineering. I thrive where technical leadership meets product vision — driving code quality, setting standards, and turning complex requirements into elegant, maintainable solutions.
@@ -140,12 +140,12 @@ export default function About() {
                           width: '36px',
                           height: '36px',
                           borderRadius: '10px',
-                          background: 'rgba(255, 255, 255, 0.03)',
+                          background: 'rgba(0, 242, 254, 0.05)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          color: '#38BDF8',
-                          border: '1px solid rgba(255,255,255,0.06)'
+                          color: index % 2 === 0 ? '#00F2FE' : '#00D8F6',
+                          border: '1px solid rgba(0, 242, 254, 0.2)'
                         }}
                       >
                         <Icon size={16} />
@@ -175,15 +175,15 @@ export default function About() {
               className="mission-card glass-panel"
               style={{
                 padding: '20px',
-                background: 'rgba(59, 130, 246, 0.05)',
-                border: '1px solid rgba(56, 189, 248, 0.15)',
+                background: 'rgba(0, 242, 254, 0.04)',
+                border: '1px solid rgba(0, 242, 254, 0.2)',
                 display: 'flex',
                 alignItems: 'flex-start',
                 gap: '14px',
                 borderRadius: '20px'
               }}
             >
-              <Target size={24} style={{ color: '#38BDF8', marginTop: '3px' }} />
+              <Target size={24} style={{ color: '#00F2FE', marginTop: '3px' }} />
               <div>
                 <h4 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '6px' }}>
                   Mission Objective

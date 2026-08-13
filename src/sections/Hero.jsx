@@ -171,16 +171,15 @@ export default function Hero() {
 
           {/* Left: Text intro & typwriter */}
           <div className="hero-content">
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="hero-badge glass-panel"
-              style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.08)' }}
+              className="hero-badge"
             >
-              <span className="badge-dot" style={{ backgroundColor: '#22c55e', boxShadow: '0 0 10px #22c55e' }}></span>
-              Available for Opportunities
-            </motion.div> */}
+              <span className="badge-dot"></span>
+              SIGNAL LINK ACTIVE • AVAILABLE
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -189,7 +188,7 @@ export default function Hero() {
               className="hero-title"
               style={{ fontFamily: 'var(--font-display)', fontWeight: 900, letterSpacing: '-0.02em' }}
             >
-              Hi, I'm <span className="text-gradient-accent">Samuel Nadar</span>
+              Hi, I'm <span className="text-gradient-cyan">Samuel Nadar</span>
             </motion.h1>
 
             <motion.div
@@ -197,13 +196,13 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hero-subtitle text-glow"
-              style={{ fontWeight: 600, color: '#38BDF8', height: '40px', display: 'flex', alignItems: 'center' }}
+              style={{ fontWeight: 600, color: '#00F2FE', height: '40px', display: 'flex', alignItems: 'center' }}
             >
               <span>{displayedRole}</span>
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
-                style={{ marginLeft: '4px', background: '#38BDF8', width: '3px', height: '28px' }}
+                style={{ marginLeft: '4px', background: '#00F2FE', width: '3px', height: '28px', boxShadow: '0 0 8px #00F2FE' }}
               />
             </motion.div>
 
@@ -224,16 +223,12 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="hero-details-list"
             >
-              {/* <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <MapPin className="detail-icon" size={18} style={{ color: '#38BDF8' }} />
-                <span style={{ color: 'var(--text-secondary)' }}>602, Synergy Business Park, Mumbai</span>
-              </div> */}
               <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <Briefcase className="detail-icon" size={18} style={{ color: '#60A5FA' }} />
+                <Briefcase className="detail-icon" size={18} style={{ color: '#00F2FE' }} />
                 <span style={{ color: 'var(--text-secondary)' }}>Software Engineer Team Lead at Accenture</span>
               </div>
               <div className="hero-detail-item" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <GraduationCap className="detail-icon" size={18} style={{ color: '#3B82F6' }} />
+                <GraduationCap className="detail-icon" size={18} style={{ color: '#00D8F6' }} />
                 <span style={{ color: 'var(--text-secondary)' }}>Bachelor of Computer Engineering (Mumbai University)</span>
               </div>
             </motion.div>
@@ -246,16 +241,23 @@ export default function Hero() {
               className="hero-actions"
             >
               <button
-                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const el = document.querySelector('.terminal-widget-container');
+                  el?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                    const inputEl = document.querySelector('.terminal-input');
+                    if (inputEl) inputEl.focus();
+                  }, 500);
+                }}
                 className="btn-primary-glow clickable"
               >
-                View Showcase
+                INITIALIZE SEQUENCE &gt;
               </button>
               <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-glass clickable"
               >
-                Hire Me
+                VIEW EXPERIENCE TIERS
               </button>
             </motion.div>
 
@@ -294,10 +296,7 @@ export default function Hero() {
                 width: '100%',
                 maxWidth: '380px',
                 padding: '24px',
-                background: 'rgba(15, 23, 42, 0.55)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '30px',
-                boxShadow: '0 25px 60px rgba(0,0,0,0.5)'
+                borderRadius: '30px'
               }}
             >
               <div className="shine-effect" />

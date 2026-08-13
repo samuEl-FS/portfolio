@@ -1,6 +1,6 @@
 /* Portfolio Section Styling */
 .portfolio-section {
-  background: radial-gradient(circle at 90% 20%, rgba(217, 70, 239, 0.05) 0%, transparent 100%);
+  background: radial-gradient(circle at 90% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 100%);
 }
 
 .portfolio-grid {
@@ -26,8 +26,8 @@
 
 .portfolio-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.25);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 242, 254, 0.25), 0 0 20px rgba(0, 136, 255, 0.15);
 }
 
 .portfolio-img-container {
@@ -37,7 +37,8 @@
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 16px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 242, 254, 0.1);
 }
 
 .portfolio-img {
@@ -57,7 +58,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(3, 0, 20, 0.4);
+  background: rgba(3, 7, 18, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -71,13 +72,14 @@
 }
 
 .portfolio-zoom-icon {
-  color: var(--text-primary);
+  color: #00F2FE;
   transform: scale(0.8);
   transition: var(--transition-smooth);
+  filter: drop-shadow(0 0 10px #00F2FE);
 }
 
 .portfolio-card:hover .portfolio-zoom-icon {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .portfolio-details {
@@ -91,9 +93,9 @@
   align-self: flex-start;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--secondary);
+  color: #00F2FE;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .project-title {
@@ -115,8 +117,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(3, 0, 20, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(14px);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -127,11 +129,12 @@
 .lightbox-card {
   width: 100%;
   max-width: 900px;
-  background: rgba(15, 12, 33, 0.8);
+  background: rgba(8, 14, 26, 0.95);
+  border: 1px solid rgba(0, 242, 254, 0.25);
   border-radius: 24px;
   padding: 32px;
   position: relative;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 242, 254, 0.15);
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -140,8 +143,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-light);
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.25);
   color: var(--text-primary);
   width: 38px;
   height: 38px;
@@ -155,8 +158,9 @@
 }
 
 .lightbox-close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--tertiary);
+  background: rgba(0, 242, 254, 0.2);
+  color: #00F2FE;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
   transform: rotate(90deg);
 }
 

@@ -9,7 +9,7 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: #05060A;
+  background: #030712;
 }
 
 /* ── Layer 1: Multi-stop base gradient ── */
@@ -17,9 +17,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(30, 58, 138, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 80% 90%, rgba(14, 116, 144, 0.20) 0%, transparent 60%),
-    radial-gradient(ellipse 90% 70% at 50% 50%, rgba(5, 6, 10, 1) 40%, transparent 100%);
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(0, 242, 254, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 90%, rgba(0, 136, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 50%, rgba(3, 7, 18, 1) 40%, transparent 100%);
   z-index: 0;
 }
 
@@ -33,18 +33,12 @@
   background-size: 180px 180px;
 }
 
-/* ── Layer 3: Dot grid ── */
+/* ── Layer 3: Tech grid pattern (disabled) ── */
 .bg-dot-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 38px 38px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  display: none;
 }
 
-/* ── Layer 4: Aurora orbs ── */
+/* ── Layer 4: Cyber Aurora Orbs ── */
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -55,9 +49,9 @@
 .orb-blue {
   width: 65vw;
   height: 65vw;
-  background: radial-gradient(circle at 40% 40%, #3B82F6 0%, rgba(59,130,246,0.3) 35%, transparent 70%);
+  background: radial-gradient(circle at 40% 40%, #00F2FE 0%, rgba(0, 242, 254, 0.28) 35%, transparent 70%);
   filter: blur(110px);
-  opacity: 0.22;
+  opacity: 0.25;
   top: -18vw;
   left: -12vw;
 }
@@ -65,9 +59,9 @@
 .orb-cyan {
   width: 72vw;
   height: 72vw;
-  background: radial-gradient(circle at 60% 60%, #06b6d4 0%, rgba(6,182,212,0.25) 35%, transparent 70%);
+  background: radial-gradient(circle at 60% 60%, #00E5FF 0%, rgba(0, 229, 255, 0.25) 35%, transparent 70%);
   filter: blur(130px);
-  opacity: 0.18;
+  opacity: 0.22;
   bottom: -22vw;
   right: -14vw;
 }
@@ -75,9 +69,9 @@
 .orb-indigo {
   width: 55vw;
   height: 55vw;
-  background: radial-gradient(circle at 50% 50%, #818cf8 0%, rgba(99,102,241,0.2) 40%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, #0088FF 0%, rgba(0, 136, 255, 0.22) 40%, transparent 70%);
   filter: blur(120px);
-  opacity: 0.16;
+  opacity: 0.22;
   top: 30%;
   left: 22%;
 }
@@ -85,9 +79,9 @@
 .orb-violet {
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle at 50% 50%, #a855f7 0%, rgba(168,85,247,0.15) 40%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, #0284C7 0%, rgba(2, 132, 199, 0.2) 40%, transparent 70%);
   filter: blur(140px);
-  opacity: 0.13;
+  opacity: 0.2;
   bottom: 5%;
   left: -8vw;
 }

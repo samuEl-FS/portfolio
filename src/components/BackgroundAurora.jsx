@@ -80,7 +80,7 @@ function ParticleCanvas() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(96,165,250,${p.opacity})`;
+        ctx.fillStyle = `rgba(0, 242, 254, ${p.opacity})`;
         ctx.fill();
 
         /* Draw edges to neighbours */
@@ -93,7 +93,7 @@ function ParticleCanvas() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(56,189,248,${alpha})`;
+            ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
             ctx.lineWidth = 0.7;
             ctx.stroke();
           }
@@ -105,8 +105,8 @@ function ParticleCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.current.x, mouse.current.y);
-          ctx.strokeStyle = `rgba(96,165,250,${alpha})`;
-          ctx.lineWidth = 0.6;
+          ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         }
       }

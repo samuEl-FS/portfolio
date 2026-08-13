@@ -1,6 +1,6 @@
 /* Education Section Styling */
 .education-section {
-  background: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+  background: radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 100%);
 }
 
 .education-grid {
@@ -26,25 +26,26 @@
 
 .education-card:hover {
   transform: translateY(-6px) scale(1.02);
-  border-color: rgba(6, 182, 212, 0.25);
-  box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 242, 254, 0.2);
 }
 
 .edu-icon-container {
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  background: rgba(6, 182, 212, 0.05);
-  border: 1px solid rgba(6, 182, 212, 0.15);
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
 }
 
 .edu-icon {
-  color: var(--secondary);
-  filter: drop-shadow(0 0 6px var(--secondary-glow));
+  color: #00F2FE;
+  filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.6));
 }
 
 .edu-card-content {

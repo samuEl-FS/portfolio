@@ -191,10 +191,18 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const [expandedIndex, setExpandedIndex] = useState(0); // First item expanded by default
+  const [expandedIndices, setExpandedIndices] = useState(() => new Set(experiences.map((_, i) => i))); // All items expanded by default
 
   const toggleExpand = (idx) => {
-    setExpandedIndex(expandedIndex === idx ? null : idx);
+    setExpandedIndices(prev => {
+      const next = new Set(prev);
+      if (next.has(idx)) {
+        next.delete(idx);
+      } else {
+        next.add(idx);
+      }
+      return next;
+    });
   };
 
   return (
@@ -226,7 +234,7 @@ export default function Experience() {
           <div
             className="timeline-line"
             style={{
-              background: 'linear-gradient(to bottom, rgba(56, 189, 248, 0.4), rgba(59, 130, 246, 0.05))',
+              background: 'linear-gradient(to bottom, rgba(0, 242, 254, 0.4), rgba(0, 136, 255, 0.05))',
               opacity: 0.8,
               zIndex: 1
             }}
@@ -234,7 +242,7 @@ export default function Experience() {
 
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;
-            const isExpanded = expandedIndex === index;
+            const isExpanded = expandedIndices.has(index);
 
             return (
               <div
@@ -247,15 +255,15 @@ export default function Experience() {
                   <div
                     className="timeline-dot"
                     style={{
-                      border: '2.5px solid #38BDF8',
-                      boxShadow: '0 0 15px rgba(56, 189, 248, 0.4)',
-                      background: '#0F172A',
+                      border: '2.5px solid #00F2FE',
+                      boxShadow: '0 0 15px rgba(0, 242, 254, 0.5)',
+                      background: '#030712',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center'
                     }}
                   >
-                    <Briefcase size={14} style={{ color: '#38BDF8' }} />
+                    <Briefcase size={14} style={{ color: '#00F2FE' }} />
                   </div>
                 </div>
 
@@ -269,11 +277,11 @@ export default function Experience() {
                   style={{
                     width: '100%',
                     background: 'rgba(15, 23, 42, 0.45)',
-                    border: isExpanded ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
+                    border: isExpanded ? '1px solid rgba(0, 242, 254, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
                     borderRadius: '24px',
                     padding: '24px',
                     textAlign: 'left',
-                    boxShadow: isExpanded ? '0 10px 30px rgba(56, 189, 248, 0.1)' : '0 4px 20px rgba(0, 0, 0, 0.2)',
+                    boxShadow: isExpanded ? '0 10px 30px rgba(0, 242, 254, 0.1)' : '0 4px 20px rgba(0, 0, 0, 0.2)',
                     transition: 'all 0.3s'
                   }}
                 >
@@ -291,12 +299,12 @@ export default function Experience() {
                     <span
                       style={{
                         padding: '4px 10px',
-                        background: 'rgba(56, 189, 248, 0.1)',
-                        border: '1px solid rgba(56, 189, 248, 0.2)',
+                        background: 'rgba(0, 242, 254, 0.1)',
+                        border: '1px solid rgba(0, 242, 254, 0.2)',
                         borderRadius: '12px',
                         fontSize: '0.75rem',
                         fontWeight: 600,
-                        color: '#38BDF8',
+                        color: '#00F2FE',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '6px'
@@ -325,7 +333,7 @@ export default function Experience() {
                       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)', margin: 0 }}>
                         {exp.role}
                       </h3>
-                      <span style={{ fontSize: '0.9rem', color: '#60A5FA', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <span style={{ fontSize: '0.9rem', color: '#00F2FE', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
                         {exp.company}
                         {exp.link && (
                           <a 
@@ -333,7 +341,7 @@ export default function Experience() {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             onClick={(e) => e.stopPropagation()}
-                            style={{ color: '#38BDF8', display: 'inline-flex', alignItems: 'center' }}
+                            style={{ color: '#00F2FE', display: 'inline-flex', alignItems: 'center' }}
                             title="Visit website"
                           >
                             <ExternalLink size={12} />
@@ -368,7 +376,7 @@ export default function Experience() {
                                 }}
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 600, color: '#60A5FA', marginBottom: '8px' }}>
+                                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 600, color: '#00F2FE', marginBottom: '8px' }}>
                                   ⚡ {proj.name}
                                 </h4>
                                 <ul
@@ -396,9 +404,9 @@ export default function Experience() {
                                         fontSize: '0.7rem', 
                                         padding: '3px 8px', 
                                         borderRadius: '6px', 
-                                        background: 'rgba(56, 189, 248, 0.08)', 
-                                        border: '1px solid rgba(56, 189, 248, 0.15)',
-                                        color: '#38BDF8',
+                                        background: 'rgba(0, 242, 254, 0.08)', 
+                                        border: '1px solid rgba(0, 242, 254, 0.15)',
+                                        color: '#00F2FE',
                                         fontWeight: 500
                                       }}
                                     >
@@ -438,7 +446,7 @@ export default function Experience() {
                       alignItems: 'center',
                       gap: '4px',
                       fontSize: '0.8rem',
-                      color: '#38BDF8',
+                      color: '#00F2FE',
                       marginBottom: '16px',
                       fontWeight: 600
                     }}

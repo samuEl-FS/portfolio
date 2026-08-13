@@ -1,20 +1,20 @@
 .custom-cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--tertiary);
+  background-color: #00F2FE;
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 10px var(--tertiary);
+  box-shadow: 0 0 12px #00F2FE;
   transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 
 .custom-cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  border: 1.5px solid rgba(0, 242, 254, 0.4);
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -26,15 +26,16 @@
 .custom-cursor-hover .custom-cursor-dot {
   width: 12px;
   height: 12px;
-  background-color: var(--primary);
-  box-shadow: 0 0 16px var(--primary);
+  background-color: #00F2FE;
+  box-shadow: 0 0 20px #00F2FE;
 }
 
 .custom-cursor-hover .custom-cursor-ring {
   width: 56px;
   height: 56px;
-  border-color: var(--primary);
-  background-color: rgba(59, 130, 246, 0.1);
+  border-color: #00F2FE;
+  background-color: rgba(0, 242, 254, 0.12);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
 }
 
 @media (max-width: 768px) {

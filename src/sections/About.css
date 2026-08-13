@@ -98,17 +98,17 @@
 
 .details-icon-wrapper.text-purple {
   color: var(--primary);
-  border-color: rgba(139, 92, 246, 0.2);
+  border-color: rgba(0, 242, 254, 0.25);
 }
 
 .details-icon-wrapper.text-cyan {
   color: var(--secondary);
-  border-color: rgba(6, 182, 212, 0.2);
+  border-color: rgba(0, 216, 246, 0.25);
 }
 
 .details-icon-wrapper.text-pink {
   color: var(--tertiary);
-  border-color: rgba(217, 70, 239, 0.2);
+  border-color: rgba(0, 136, 255, 0.25);
 }
 
 .details-content {
