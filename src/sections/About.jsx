@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User2, Flag, Phone, Mail, Award, Target } from 'lucide-react';
+import { getYearsOfExperience, getFormattedExperienceString } from '../utils/experience';
 import './About.css';
 
 const personalDetails = [
@@ -12,7 +13,7 @@ const personalDetails = [
 ];
 
 const stats = [
-  { id: 'exp', label: 'Years Experience', target: 8, suffix: '+' },
+  { id: 'exp', label: 'Years Experience', target: getYearsOfExperience(), suffix: '+' },
   { id: 'projects', label: 'Completed Projects', target: 24, suffix: '+' },
   { id: 'tech', label: 'Tech Stack Handled', target: 50, suffix: '+' },
   { id: 'clients', label: 'Product Deployments', target: 12, suffix: '+' }
@@ -109,7 +110,7 @@ export default function About() {
               <h3 style={{ fontSize: '1.4rem' }}>Professional Narrative</h3>
             </div>
             <p style={{ marginBottom: '16px', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>8+ years of experience</strong> working with organisations like <strong style={{ color: '#00F2FE' }}>Accenture</strong>, <strong style={{ color: '#00F2FE' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#00F2FE' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
+              I am a Software Engineer Team Lead passionate about building scalable, high-performance applications that solve real business problems. With <strong style={{ color: 'var(--text-primary)' }}>{getFormattedExperienceString()} years of experience</strong> working with organisations like <strong style={{ color: '#00F2FE' }}>Accenture</strong>, <strong style={{ color: '#00F2FE' }}>JPMorgan Chase</strong>, and <strong style={{ color: '#00F2FE' }}>Privacera</strong>, I have led engineering teams, architected enterprise solutions, and built modern applications using React, Angular, and TypeScript.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
               My focus is on <strong style={{ color: 'var(--text-primary)' }}>clean architecture</strong>, reusable components, and delivering exceptional user experiences through thoughtful engineering. I thrive where technical leadership meets product vision — driving code quality, setting standards, and turning complex requirements into elegant, maintainable solutions.

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Briefcase, GraduationCap, MessageSquare, Download, Terminal as TermIcon } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { getFormattedExperienceString } from '../utils/experience';
 import './Hero.css';
 
 const GithubIcon = ({ size = 20, className }) => (
@@ -213,7 +214,7 @@ export default function Hero() {
               className="hero-description"
               style={{ color: 'var(--text-secondary)', lineHeight: '1.7', margin: '16px 0 32px' }}
             >
-              Software Engineer Team Lead with 8+ years building enterprise-scale applications at Accenture, JPMorgan Chase, and Privacera — leading teams, architecting frontend systems, and delivering exceptional user experiences through React, Angular, and TypeScript.
+              Software Engineer Team Lead with {getFormattedExperienceString()} years building enterprise-scale applications at Accenture, JPMorgan Chase, and Privacera — leading teams, architecting frontend systems, and delivering exceptional user experiences through React, Angular, and TypeScript.
             </motion.p>
 
             {/* Core details rows */}
