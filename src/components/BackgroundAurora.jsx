@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './BackgroundAurora.css';
 
-/* ─── Canvas Particle Network ───────────────────────────────────────── */
+/* ─── Combined Canvas: Particles + Shooting Stars + Animex.one Falling Stars ─── */
 function ParticleCanvas() {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: -9999, y: -9999 });
@@ -10,6 +10,7 @@ function ParticleCanvas() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let W = window.innerWidth, H = window.innerHeight;
     canvas.width = W; canvas.height = H;
@@ -27,7 +28,7 @@ function ParticleCanvas() {
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseleave', onLeave);
 
-    /* Particles */
+    /* 1. Ambient Particles (Master branch) */
     const COUNT = 90;
     const particles = Array.from({ length: COUNT }, () => ({
       x: Math.random() * W,
@@ -38,7 +39,7 @@ function ParticleCanvas() {
       opacity: Math.random() * 0.5 + 0.2,
     }));
 
-    /* Shooting stars */
+    /* 2. Big Occasional Shooting Stars (Master branch) */
     const MAX_SHOTS = 3;
     const shooters = [];
     const spawnShooter = () => {
@@ -55,27 +56,139 @@ function ParticleCanvas() {
     };
     const shootInterval = setInterval(spawnShooter, 2800);
 
+    /* 3. Animex.one Full-Screen Falling Stars (87.5% slower speed, full edge-to-edge trajectory) */
+    const STAR_COUNT = 24;
+    const baseAngle = (36 * Math.PI) / 180; // ~36 degrees slanted downwards towards bottom-right
+
+    const createStar = (initialIndex = -1) => {
+      const len = Math.random() * 65 + 40; // tapered meteor tail (40px - 105px)
+      const speed = Math.random() * 0.4375 + 0.5; // 87.5% slower falling speed (0.50px - 0.9375px/frame)
+      const angle = baseAngle + (Math.random() - 0.5) * 0.05;
+      const opacity = Math.random() * 0.4 + 0.55; // vivid glow highlight
+      const thickness = Math.random() * 0.75 + 0.5; // thin, sleek streak (0.5px - 1.25px)
+
+      // Varied entry coordinates across top and left screen boundaries
+      let x, y;
+      if (Math.random() > 0.35) {
+        x = Math.random() * (W + 300) - 200;
+        y = -len - Math.random() * 60;
+      } else {
+        x = -len - Math.random() * 80;
+        y = Math.random() * H * 0.8 - 40;
+      }
+
+      const entryX = x;
+      const entryY = y;
+
+      const randColor = Math.random();
+      let rgb = '0, 242, 254'; // Cyan
+      if (randColor > 0.65) rgb = '56, 189, 248'; // Sky blue
+      else if (randColor > 0.35) rgb = '240, 249, 255'; // Ice White
+
+      // Staggered time gap:
+      // Initial load: Star i gets i * 70 frames delay (~1.2s gap between each meteor entry)
+      // Respawn: Random delay of 70 - 220 frames (~1.2s - 3.6s pause)
+      const delay = initialIndex >= 0 ? initialIndex * 70 : Math.floor(Math.random() * 150 + 70);
+
+      return {
+        x,
+        y,
+        entryX,
+        entryY,
+        len,
+        speed,
+        angle,
+        opacity,
+        thickness,
+        rgb,
+        delay,
+      };
+    };
+
+    const fallingStars = Array.from({ length: STAR_COUNT }, (_, i) => createStar(i));
+
     const LINK_DIST = 130;
     const MOUSE_DIST = 160;
 
     const draw = () => {
       ctx.clearRect(0, 0, W, H);
 
-      /* ── Update & draw particles ── */
+      /* ── A. Render Full-Screen Sequential Falling Stars (Edge-to-edge trajectory) ── */
+      for (let i = 0; i < STAR_COUNT; i++) {
+        const s = fallingStars[i];
+
+        // If star has delay remaining, decrement delay and skip drawing this frame
+        if (s.delay > 0) {
+          s.delay -= 1;
+          continue;
+        }
+
+        // Move diagonally towards bottom-right (+dx, +dy)
+        const dx = Math.cos(s.angle) * s.speed;
+        const dy = Math.sin(s.angle) * s.speed;
+        s.x += dx;
+        s.y += dy;
+
+        // Reset ONLY when star has completely crossed past the end of the screen
+        if (s.x > W + s.len * 2.5 || s.y > H + s.len * 2.5) {
+          fallingStars[i] = createStar(-1);
+          continue;
+        }
+
+        // Calculate travel distance from entry point
+        const distTraveled = Math.hypot(s.x - s.entryX, s.y - s.entryY);
+        // Smooth entry fade in (first 100px) & exit fade out as it reaches screen edge
+        const fadeInAlpha = Math.min(1, distTraveled / 100);
+        const exitXAlpha = Math.max(0, Math.min(1, (W + s.len - s.x) / 140));
+        const exitYAlpha = Math.max(0, Math.min(1, (H + s.len - s.y) / 140));
+        const currentOpacity = s.opacity * fadeInAlpha * Math.min(exitXAlpha, exitYAlpha);
+
+        if (currentOpacity <= 0.01) continue;
+
+        const tailX = s.x - Math.cos(s.angle) * s.len;
+        const tailY = s.y - Math.sin(s.angle) * s.len;
+
+        // Linear gradient from Tail (transparent) to Head (bright white/cyan)
+        const grad = ctx.createLinearGradient(tailX, tailY, s.x, s.y);
+        grad.addColorStop(0, `rgba(${s.rgb}, 0)`);
+        grad.addColorStop(0.3, `rgba(${s.rgb}, ${currentOpacity * 0.4})`);
+        grad.addColorStop(0.8, `rgba(${s.rgb}, ${currentOpacity * 0.85})`);
+        grad.addColorStop(1, `rgba(255, 255, 255, ${currentOpacity})`);
+
+        ctx.beginPath();
+        ctx.moveTo(tailX, tailY);
+        ctx.lineTo(s.x, s.y);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = s.thickness;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+
+        // Glowing meteor head
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.thickness * 2.0, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${s.rgb}, ${currentOpacity * 0.8})`;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.thickness * 0.9, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${currentOpacity})`;
+        ctx.fill();
+      }
+
+      /* ── B. Update & draw ambient master particles ── */
       for (let i = 0; i < COUNT; i++) {
         const p = particles[i];
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
         if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
 
-        /* Mouse repulsion / attraction */
         const dx = mouse.current.x - p.x;
         const dy = mouse.current.y - p.y;
         const md = Math.sqrt(dx * dx + dy * dy);
         if (md < MOUSE_DIST) {
           const force = (MOUSE_DIST - md) / MOUSE_DIST;
-          p.x -= dx / md * force * 0.9;
-          p.y -= dy / md * force * 0.9;
+          p.x -= (dx / md) * force * 0.9;
+          p.y -= (dy / md) * force * 0.9;
         }
 
         ctx.beginPath();
@@ -83,7 +196,6 @@ function ParticleCanvas() {
         ctx.fillStyle = `rgba(0, 242, 254, ${p.opacity})`;
         ctx.fill();
 
-        /* Draw edges to neighbours */
         for (let j = i + 1; j < COUNT; j++) {
           const q = particles[j];
           const ex = p.x - q.x, ey = p.y - q.y;
@@ -99,7 +211,6 @@ function ParticleCanvas() {
           }
         }
 
-        /* Mouse glow line */
         if (md < MOUSE_DIST) {
           const alpha = (1 - md / MOUSE_DIST) * 0.35;
           ctx.beginPath();
@@ -111,7 +222,7 @@ function ParticleCanvas() {
         }
       }
 
-      /* ── Shooting stars ── */
+      /* ── C. Master Shooting stars ── */
       for (let s = shooters.length - 1; s >= 0; s--) {
         const sh = shooters[s];
         sh.x += Math.cos(sh.angle) * sh.speed;
@@ -137,7 +248,6 @@ function ParticleCanvas() {
         ctx.lineCap = 'round';
         ctx.stroke();
 
-        /* Head sparkle */
         ctx.beginPath();
         ctx.arc(sh.x, sh.y, 1.5 * sh.life, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,255,255,${sh.life})`;
@@ -251,7 +361,7 @@ export default function BackgroundAurora() {
         ))}
       </div>
 
-      {/* ── Layer 8: Canvas — particle mesh + shooting stars ── */}
+      {/* ── Layer 8: Combined Canvas (Particles + Shooters + Falling Stars) ── */}
       <ParticleCanvas />
 
       {/* ── Layer 9: Vignette edge darkening ── */}
